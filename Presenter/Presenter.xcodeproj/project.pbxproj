@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		353087D9212A58110050B953 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353087D8212A58110050B953 /* TestViewController.m */; };
 		353087DE212A91B40050B953 /* PresenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353087DD212A91B40050B953 /* PresenterViewController.m */; };
 		353087E1212AB8640050B953 /* PresenterViewController+Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 353087E0212AB8640050B953 /* PresenterViewController+Show.m */; };
 		353087E4212AB8880050B953 /* PresenterOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 353087E3212AB8880050B953 /* PresenterOption.m */; };
@@ -29,8 +28,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		353087D7212A58110050B953 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		353087D8212A58110050B953 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		353087DC212A91B40050B953 /* PresenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresenterViewController.h; sourceTree = "<group>"; };
 		353087DD212A91B40050B953 /* PresenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresenterViewController.m; sourceTree = "<group>"; };
 		353087DF212AB8640050B953 /* PresenterViewController+Show.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PresenterViewController+Show.h"; sourceTree = "<group>"; };
@@ -79,15 +76,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		353087D6212A57F90050B953 /* TestViewController */ = {
-			isa = PBXGroup;
-			children = (
-				353087D7212A58110050B953 /* TestViewController.h */,
-				353087D8212A58110050B953 /* TestViewController.m */,
-			);
-			path = TestViewController;
-			sourceTree = "<group>";
-		};
 		353087DA212A90750050B953 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +106,6 @@
 		357F488C2127CB0B00CE33C3 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				353087D6212A57F90050B953 /* TestViewController */,
 				359395732127EA780048EB6E /* Classes */,
 				357F488D2127CB0B00CE33C3 /* AppDelegate.h */,
 				357F488E2127CB0B00CE33C3 /* AppDelegate.m */,
@@ -241,7 +228,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3593959E212846150048EB6E /* PresenterHorizontalAnimator.m in Sources */,
-				353087D9212A58110050B953 /* TestViewController.m in Sources */,
 				3593959221283F600048EB6E /* PresenterVerticalAnimator.m in Sources */,
 				353087DE212A91B40050B953 /* PresenterViewController.m in Sources */,
 				357F48922127CB0B00CE33C3 /* ViewController.m in Sources */,
