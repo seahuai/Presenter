@@ -37,6 +37,7 @@
 		353087E0212AB8640050B953 /* PresenterViewController+Show.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PresenterViewController+Show.m"; sourceTree = "<group>"; };
 		353087E2212AB8880050B953 /* PresenterOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresenterOption.h; sourceTree = "<group>"; };
 		353087E3212AB8880050B953 /* PresenterOption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresenterOption.m; sourceTree = "<group>"; };
+		35308807212AD9530050B953 /* SHPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHPresenter.h; sourceTree = "<group>"; };
 		357F488A2127CB0B00CE33C3 /* Presenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Presenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		357F488D2127CB0B00CE33C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		357F488E2127CB0B00CE33C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 		359395732127EA780048EB6E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				35308807212AD9530050B953 /* SHPresenter.h */,
 				353087DA212A90750050B953 /* BaseViewController */,
 				359395802128275E0048EB6E /* Animator */,
 				359395742127EB350048EB6E /* Presenter.h */,
@@ -143,8 +145,6 @@
 				353087E3212AB8880050B953 /* PresenterOption.m */,
 				359395772127F6600048EB6E /* PresentationController.h */,
 				359395782127F6600048EB6E /* PresentationController.m */,
-				3593957D21281A250048EB6E /* PresenterTransitionContext.h */,
-				3593957E21281A250048EB6E /* PresenterTransitionContext.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -152,6 +152,8 @@
 		359395802128275E0048EB6E /* Animator */ = {
 			isa = PBXGroup;
 			children = (
+				3593957D21281A250048EB6E /* PresenterTransitionContext.h */,
+				3593957E21281A250048EB6E /* PresenterTransitionContext.m */,
 				35939584212836640048EB6E /* PresenterAnimatorOption.h */,
 				35939585212836640048EB6E /* PresenterAnimatorOption.m */,
 				3593957A212819F80048EB6E /* PresenterAnimator.h */,
@@ -399,7 +401,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.neteasemusic.Presenter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zsh.Presenter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -415,7 +417,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.neteasemusic.Presenter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zsh.Presenter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
