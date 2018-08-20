@@ -26,9 +26,9 @@
         _transitionStyle = PresenterTransitionStyleCrossDissolve;
         _dismissTransitionStyle = PresenterTransitionStyleCrossDissolve;
         _backgroundColor = [UIColor blackColor];
-        _backgroundColorOpacity = 0.4f;
+        _backgroundColorOpacity = 0.6f;
         _blurBackground = false;
-        _backgroundBlurStyle = UIBlurEffectStyleLight;
+        _backgroundBlurStyle = UIBlurEffectStyleDark;
         _backgroundView = nil;
         _dismissOnTap = true;
     }
@@ -39,7 +39,7 @@
              inViewController:(UIViewController*)presentingViewController {
     presentedViewController.transitioningDelegate = self;
     presentedViewController.modalPresentationStyle = UIModalPresentationCustom;
-    BOOL animated = !(self.transitionStyle == PresenterTransitionStyleWithoutAnimated);
+    BOOL animated = !(self.transitionStyle == PresenterTransitionStyleWithoutAnimation);
     if (presentingViewController) {
         [presentingViewController presentViewController:presentedViewController animated:animated completion:nil];
     }
@@ -47,7 +47,18 @@
 }
 
 - (void)dismiss {
-    
+    BOOL animated = !(self.dismissTransitionStyle == PresenterTransitionStyleWithoutAnimation);
+    if (_presentedViewController) {
+        [_presentedViewController dismissViewControllerAnimated:animated completion:nil];
+    }
+    // call topViewController dismiss method
+}
+
+#pragma mark Setter
+- (void)setTransitionStyle:(PresenterTransitionStyle)transitionStyle {
+    // set default dismiss transiton style accroding to transtion style
+    _transitionStyle = transitionStyle;
+    _dismissTransitionStyle = transitionStyle;
 }
 
 #pragma mark UIViewControllerTransitioningDelegate

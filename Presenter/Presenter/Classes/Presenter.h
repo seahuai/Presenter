@@ -17,7 +17,7 @@ typedef NS_ENUM(NSUInteger, PresenterPresentationType) {
 };
 
 typedef NS_ENUM(NSUInteger, PresenterTransitionStyle) {
-    PresenterTransitionStyleWithoutAnimated,
+    PresenterTransitionStyleWithoutAnimation,
     PresenterTransitionStyleCrossDissolve,
     PresenterTransitionStyleFlipHorizontal,
     PresenterTransitionStyleVertical,

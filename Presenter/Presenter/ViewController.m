@@ -19,17 +19,19 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     ViewController *viewController = [ViewController new];
-    viewController.view.backgroundColor = [UIColor redColor];
-    
+    viewController.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     _presenter = [Presenter new];
     self.presenter.presentedViewSize = CGSizeMake(100, 200);
-    self.presenter.backgroundColor = [UIColor lightGrayColor];
-    self.presenter.presentationType = PresenterPresentationTypeBottom;
+    self.presenter.presentationType = PresenterPresentationTypeCenter;
+    self.presenter.transitionStyle = PresenterTransitionStyleVerticalFromTop;
+//    self.presenter.dismissTransitionStyle = PresenterTransitionStyleHorizontalFromLeft;
+//    self.presenter.blurBackground = YES;
     [self.presenter presentViewController:viewController inViewController:self];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 @end

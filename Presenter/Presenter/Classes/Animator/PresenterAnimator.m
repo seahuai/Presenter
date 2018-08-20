@@ -43,9 +43,7 @@
         case PresenterTransitionStyleHorizontalFromLeft:
             
             return [[PresenterHorizontalAnimator alloc] initFromLeft:true];
-            
-
-            
+        
         default:
             return nil;
     }

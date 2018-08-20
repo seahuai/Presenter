@@ -13,6 +13,7 @@
     PresenterTransitionStyle _transitionStyle;
     PresenterTransitionStyle _dismissTransitionStyle;
     UIView *_backgroundView;
+    UIVisualEffectView *_visualEffectView;
     CGSize _presentedViewSize;
 }
 
@@ -59,18 +60,10 @@
     _backgroundView = [UIView new];
     if (isBlurBackground) {
         UIBlurEffect *visualEffect = [UIBlurEffect effectWithStyle:blurStyle];
-        UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:visualEffect];
-        [_backgroundView addSubview:visualEffectView];
-        [visualEffectView addConstraints:@[
-                               [NSLayoutConstraint constraintWithItem:_backgroundView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0],
-                               [NSLayoutConstraint constraintWithItem:_backgroundView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0],
-                               [NSLayoutConstraint constraintWithItem:_backgroundView attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1.0 constant:0.0],
-                               [NSLayoutConstraint constraintWithItem:_backgroundView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeRight multiplier:1.0 constant:0.0],
-                               ]];
-        
+        _visualEffectView = [[UIVisualEffectView alloc] initWithEffect:visualEffect];
+        [_backgroundView addSubview:_visualEffectView];
     }else {
-        _backgroundView.backgroundColor = bgColor;
-        [_backgroundView.backgroundColor colorWithAlphaComponent:bgOpacity];
+        _backgroundView.backgroundColor = [bgColor colorWithAlphaComponent:bgOpacity];
     }
     
     if (dismissOnTap) {
@@ -93,7 +86,9 @@
 
 - (void)containerViewDidLayoutSubviews {
     _backgroundView.frame = self.containerView.bounds;
+    _visualEffectView.frame = self.containerView.bounds;
     self.presentedView.frame = [self presentedViewFrame];
+    
 }
 
 - (void)presentationTransitionWillBegin {
@@ -102,6 +97,7 @@
     }
     _backgroundView.frame = self.containerView.bounds;
     [self.containerView addSubview:_backgroundView];
+    [self.containerView addSubview:self.presentedView];
     _backgroundView.alpha = 0;
     
     id<UIViewControllerTransitionCoordinator> coordinator = self.presentedViewController.transitionCoordinator;
@@ -110,12 +106,18 @@
         return;
     }
     
-    if (_transitionStyle == PresenterTransitionStyleWithoutAnimated) {
+    if (_transitionStyle == PresenterTransitionStyleWithoutAnimation) {
         _backgroundView.alpha = 1;
     }else {
         [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
             self->_backgroundView.alpha = 1;
         } completion:nil];
+    }
+}
+
+- (void)presentationTransitionDidEnd:(BOOL)completed {
+    if (!completed) {
+        [_backgroundView removeFromSuperview];
     }
 }
 
@@ -125,8 +127,7 @@
         _backgroundView.alpha = 0;
         return;
     }
-    
-    if (_dismissTransitionStyle == PresenterTransitionStyleWithoutAnimated) {
+    if (_dismissTransitionStyle == PresenterTransitionStyleWithoutAnimation) {
         _backgroundView.alpha = 0;
     }else {
         [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
@@ -171,12 +172,10 @@
     return CGRectMake(origin.x, origin.y, _presentedViewSize.width, _presentedViewSize.height);
 }
 
-
-
 #pragma mark Action
 - (void)backgroundViewTapped:(UITapGestureRecognizer *)gestureRecognize {
-    BOOL dismissAnimated = !(_dismissTransitionStyle == PresenterTransitionStyleWithoutAnimated);
-    [self.presentingViewController dismissViewControllerAnimated:dismissAnimated completion:nil];
+    BOOL dismissAnimated = !(_dismissTransitionStyle == PresenterTransitionStyleWithoutAnimation);
+    [self.presentedViewController dismissViewControllerAnimated:dismissAnimated completion:nil];
 }
 
 
