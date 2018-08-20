@@ -11,6 +11,6 @@
 
 #import <Presenter/Presenter.h>
 #import <Presenter/PresentationController.h>
-#import <Presenter/PresentationController+show.h>
+#import <Presenter/PresentationController+Show.h>
 
 #endif /* SHPresenter_h */
