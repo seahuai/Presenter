@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ExampleTwoViewController.h
 //  Example
 //
 //  Created by 张思槐 on 2018/8/20.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ExampleTwoViewController : UIViewController
 
 @end
-

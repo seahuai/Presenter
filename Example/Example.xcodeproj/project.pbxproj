@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		353087F3212AD64E0050B953 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 353087F2212AD64E0050B953 /* AppDelegate.m */; };
-		353087F6212AD64E0050B953 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353087F5212AD64E0050B953 /* ViewController.m */; };
 		353087F9212AD64E0050B953 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353087F7212AD64E0050B953 /* Main.storyboard */; };
 		353087FB212AD64F0050B953 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353087FA212AD64F0050B953 /* Assets.xcassets */; };
 		353087FE212AD64F0050B953 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353087FC212AD64F0050B953 /* LaunchScreen.storyboard */; };
 		35308801212AD64F0050B953 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35308800212AD64F0050B953 /* main.m */; };
+		3530880A212ADD0E0050B953 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35308809212ADD0E0050B953 /* TableViewController.m */; };
+		3530880D212ADEB50050B953 /* ExampleOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3530880C212ADEB50050B953 /* ExampleOneViewController.m */; };
+		35308811212AE0970050B953 /* ExampleTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35308810212AE0970050B953 /* ExampleTwoViewController.m */; };
 		DB89363C0A49288A9C31FE16 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128FD134E1A9FACB8652ECB9 /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,13 +24,17 @@
 		353087EE212AD64D0050B953 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		353087F1212AD64D0050B953 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		353087F2212AD64E0050B953 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		353087F4212AD64E0050B953 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		353087F5212AD64E0050B953 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		353087F8212AD64E0050B953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		353087FA212AD64F0050B953 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		353087FD212AD64F0050B953 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		353087FF212AD64F0050B953 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35308800212AD64F0050B953 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		35308808212ADD0E0050B953 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		35308809212ADD0E0050B953 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		3530880B212ADEB50050B953 /* ExampleOneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleOneViewController.h; sourceTree = "<group>"; };
+		3530880C212ADEB50050B953 /* ExampleOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleOneViewController.m; sourceTree = "<group>"; };
+		3530880F212AE0970050B953 /* ExampleTwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleTwoViewController.h; sourceTree = "<group>"; };
+		35308810212AE0970050B953 /* ExampleTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTwoViewController.m; sourceTree = "<group>"; };
 		83BC2C0A7F4425F6F7B0BEEB /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,17 +71,29 @@
 		353087F0212AD64D0050B953 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				3530880E212AE0790050B953 /* ExampleVC */,
 				353087F1212AD64D0050B953 /* AppDelegate.h */,
 				353087F2212AD64E0050B953 /* AppDelegate.m */,
-				353087F4212AD64E0050B953 /* ViewController.h */,
-				353087F5212AD64E0050B953 /* ViewController.m */,
 				353087F7212AD64E0050B953 /* Main.storyboard */,
 				353087FA212AD64F0050B953 /* Assets.xcassets */,
 				353087FC212AD64F0050B953 /* LaunchScreen.storyboard */,
 				353087FF212AD64F0050B953 /* Info.plist */,
 				35308800212AD64F0050B953 /* main.m */,
+				35308808212ADD0E0050B953 /* TableViewController.h */,
+				35308809212ADD0E0050B953 /* TableViewController.m */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		3530880E212AE0790050B953 /* ExampleVC */ = {
+			isa = PBXGroup;
+			children = (
+				3530880B212ADEB50050B953 /* ExampleOneViewController.h */,
+				3530880C212ADEB50050B953 /* ExampleOneViewController.m */,
+				3530880F212AE0970050B953 /* ExampleTwoViewController.h */,
+				35308810212AE0970050B953 /* ExampleTwoViewController.m */,
+			);
+			path = ExampleVC;
 			sourceTree = "<group>";
 		};
 		AF5976D38FC11FB007187315 /* Frameworks */ = {
@@ -206,8 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				353087F6212AD64E0050B953 /* ViewController.m in Sources */,
 				35308801212AD64F0050B953 /* main.m in Sources */,
+				3530880A212ADD0E0050B953 /* TableViewController.m in Sources */,
+				35308811212AE0970050B953 /* ExampleTwoViewController.m in Sources */,
+				3530880D212ADEB50050B953 /* ExampleOneViewController.m in Sources */,
 				353087F3212AD64E0050B953 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,7 +371,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Example/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.neteasemusic.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -365,7 +388,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Example/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.neteasemusic.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
