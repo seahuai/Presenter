@@ -1,0 +1,22 @@
+{
+  "name": "Presenter",
+  "version": "0.0.1",
+  "summary": "自定义弹窗",
+  "description": "使用UIPresentationController自定义弹窗",
+  "homepage": "https://github.com/seahuai/Presenter.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zhangsihuai": "seahuai@foxmail.com"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "git": "https://github.com/seahuai/Presenter.git"
+  },
+  "source_files": "Presenter/Presenter/Classes/**/*.{h,m}",
+  "exclude_files": "Classes/Exclude"
+}

@@ -1,0 +1,659 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0230CCE0F93816949C32DF8A6958278A /* PresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A591339FBBA9A9364B43DFBB763C8FA /* PresentationController.m */; };
+		02C0D2BD50EB2B0962C5B486A8DC2A96 /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E22BC887E777E9E9730CA1CAE7F0AEE5 /* Presenter.m */; };
+		039D6C84F760C6B9A4461D845D51E6AE /* PresenterViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 69F486C1ED4DFD876A8339FBDF1BFFB9 /* PresenterViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03DB59CC72A56E9974F3AA61725FCE4C /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D3FE98E9F2D34863BD3F3597A0485A /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0ABE09344F579FA5E92DD53286FC5783 /* PresenterViewController+Show.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB0FC487A1F5B194EF4CA4464C8C79C /* PresenterViewController+Show.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D91F8E0CBEA97AE864FB4478A10F21D /* PresenterTransitionContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 53CCE1DF88B14DDB16FEBAD1CE416D5E /* PresenterTransitionContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		218AD9EBFCED2D4C87B6A50118AC7F8A /* Presenter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 59FE944F94C4C3E851F58ADB105F50F7 /* Presenter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2191162EFF2EB88A38EB35F5FA8E89EF /* PresenterAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ED48A82AF60A04BC84EF3FFF3D6B39 /* PresenterAnimator.m */; };
+		21DA32701E33486A01FBEA8B01A345E9 /* PresenterFlipHorizontalAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 71B8BF70920491893109868F94B18D2E /* PresenterFlipHorizontalAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		225EE018BFA3E41F052C6DE90FBAA44C /* PresenterAnimatorOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 507BF417AF2340E362D64FA9AA18F841 /* PresenterAnimatorOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23380F88048360D4C11C8BAE9D04B9AD /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD65E35A3233FBE6F2EFDEB3D43D114 /* Pods-Example-dummy.m */; };
+		34E6014A6E9AB9FDC2E090E4606F1B70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		409819DBC6185C77D146E484450E91E4 /* PresenterFlipHorizontalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0360AFF9304E790EAC1CD923C13E40 /* PresenterFlipHorizontalAnimator.m */; };
+		49BDA2C435DFC7D18C6AC47FD04CBA14 /* PresenterAnimatorOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDA66BF2503A6E1003A9DC58762FDD9 /* PresenterAnimatorOption.m */; };
+		71CC36706D5A94F7E489EF9FAEF2DA58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		7346830FA2B3FB7BA18AF9BF9DE181E0 /* PresentationController.h in Headers */ = {isa = PBXBuildFile; fileRef = AFFEDE2A861DFD3D40C54DCDE6D3D938 /* PresentationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C67984B6058A2B5B2404529D5786F0C /* Presenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A3A453B0B51E3F4D520B60E60AD658C /* Presenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92DA82FB3FD9FBC7A21F186DDCCE93F1 /* SHPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E2C033E4D4F53F6B52A5B93D8091462 /* SHPresenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		954E738DE11F2E5B6B54FFD811648945 /* PresenterAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BCF243BE9D8BDF02B1A0932088EF395 /* PresenterAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C330A44452ACAD7CB1253D441DA6726 /* PresenterCrossDissolveAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 134252A97AA7F24394E0415FA7FEAA58 /* PresenterCrossDissolveAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A21BDC71EF953907EA3108D471490CEB /* PresenterTransitionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A65D7447867FA5ADC0800D9290F5C3D9 /* PresenterTransitionContext.m */; };
+		ADDB6D60BC7A3F87EC315A005F7528BC /* PresenterVerticalAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = B50CE5574C62427AFF84BE78A864D383 /* PresenterVerticalAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEE88854968EA9B57E17A1D062874BFF /* PresenterOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF73F0202A638AB2D9E592A462C4A36 /* PresenterOption.m */; };
+		C3557A9B996862AD7B1CF3F0EDAE3C0B /* PresenterVerticalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = A46312B75CE4B57486600B876AA62329 /* PresenterVerticalAnimator.m */; };
+		CB2126325A75C74C9D60E44FADA78F93 /* PresenterOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A11178CA12ED8F7AC5AE2F86A3CA299 /* PresenterOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D500B6DE3D99D3E8F71D173C30FC93F6 /* PresenterHorizontalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A217DE54FD19CA10ADEC281F9741AB /* PresenterHorizontalAnimator.m */; };
+		E7E21869461DC823E7BE1CD4098E8935 /* PresenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6247F07D98C37EC41BC69ABE285D46A9 /* PresenterViewController.m */; };
+		EF08803C17E0CA6CA601749F1867B030 /* PresenterViewController+Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 6969B1E39B64CB4EB787374D6F02664A /* PresenterViewController+Show.m */; };
+		F13BEDD79BB400B86389492C932ED543 /* Presenter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CCF42D2FB0D7CA68F0AB7B5C2EE041 /* Presenter-dummy.m */; };
+		F3A8EAC91E56E0DE5305F19BF981A982 /* PresenterCrossDissolveAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F73A9C5D3186CB9DF6A8563E5E001B /* PresenterCrossDissolveAnimator.m */; };
+		F6539EEDB2BCDF1B4040656A93178C5F /* PresenterHorizontalAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = EE4F489CFCBBD703D8E5FA71B1FAF3B5 /* PresenterHorizontalAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0343291612051E5F4E5F8C0A7101E207 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4BDDC2398916CCE0F35DD6242EE73BF;
+			remoteInfo = Presenter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		044AA3E23F71470C9B5F50D44720EA0D /* Pods-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-resources.sh"; sourceTree = "<group>"; };
+		0DA2A0755C2CE206E885F63A43501CD2 /* Presenter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Presenter.framework; path = Presenter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11434BC759D12F57876FBB74A4775E74 /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		134252A97AA7F24394E0415FA7FEAA58 /* PresenterCrossDissolveAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterCrossDissolveAnimator.h; path = Presenter/Presenter/Classes/Animator/PresenterCrossDissolveAnimator.h; sourceTree = "<group>"; };
+		15D3FE98E9F2D34863BD3F3597A0485A /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
+		1A591339FBBA9A9364B43DFBB763C8FA /* PresentationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresentationController.m; path = Presenter/Presenter/Classes/PresentationController.m; sourceTree = "<group>"; };
+		1AD65E35A3233FBE6F2EFDEB3D43D114 /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
+		1AF73F0202A638AB2D9E592A462C4A36 /* PresenterOption.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterOption.m; path = Presenter/Presenter/Classes/PresenterOption.m; sourceTree = "<group>"; };
+		1E2C033E4D4F53F6B52A5B93D8091462 /* SHPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SHPresenter.h; path = Presenter/Presenter/Classes/SHPresenter.h; sourceTree = "<group>"; };
+		25A37D4D536CC5988A439441117C41F4 /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
+		2A3A453B0B51E3F4D520B60E60AD658C /* Presenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Presenter.h; path = Presenter/Presenter/Classes/Presenter.h; sourceTree = "<group>"; };
+		2B0360AFF9304E790EAC1CD923C13E40 /* PresenterFlipHorizontalAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterFlipHorizontalAnimator.m; path = Presenter/Presenter/Classes/Animator/PresenterFlipHorizontalAnimator.m; sourceTree = "<group>"; };
+		3ADE9E5655579DB0F79DC9C80758673C /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3CB0FC487A1F5B194EF4CA4464C8C79C /* PresenterViewController+Show.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PresenterViewController+Show.h"; path = "Presenter/Presenter/Classes/BaseViewController/PresenterViewController+Show.h"; sourceTree = "<group>"; };
+		3DD20067487E06868CDF41A72D34CE2E /* Presenter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Presenter.modulemap; sourceTree = "<group>"; };
+		3F3EFEBDE6702DEFDFFF9D5C6DBC3773 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
+		507BF417AF2340E362D64FA9AA18F841 /* PresenterAnimatorOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterAnimatorOption.h; path = Presenter/Presenter/Classes/Animator/PresenterAnimatorOption.h; sourceTree = "<group>"; };
+		53CCE1DF88B14DDB16FEBAD1CE416D5E /* PresenterTransitionContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterTransitionContext.h; path = Presenter/Presenter/Classes/Animator/PresenterTransitionContext.h; sourceTree = "<group>"; };
+		59F73A9C5D3186CB9DF6A8563E5E001B /* PresenterCrossDissolveAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterCrossDissolveAnimator.m; path = Presenter/Presenter/Classes/Animator/PresenterCrossDissolveAnimator.m; sourceTree = "<group>"; };
+		59FE944F94C4C3E851F58ADB105F50F7 /* Presenter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Presenter-umbrella.h"; sourceTree = "<group>"; };
+		5B81C04F8E84EAE60AE15C8695031A5F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6247F07D98C37EC41BC69ABE285D46A9 /* PresenterViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterViewController.m; path = Presenter/Presenter/Classes/BaseViewController/PresenterViewController.m; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6969B1E39B64CB4EB787374D6F02664A /* PresenterViewController+Show.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PresenterViewController+Show.m"; path = "Presenter/Presenter/Classes/BaseViewController/PresenterViewController+Show.m"; sourceTree = "<group>"; };
+		69F486C1ED4DFD876A8339FBDF1BFFB9 /* PresenterViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterViewController.h; path = Presenter/Presenter/Classes/BaseViewController/PresenterViewController.h; sourceTree = "<group>"; };
+		6BCF243BE9D8BDF02B1A0932088EF395 /* PresenterAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterAnimator.h; path = Presenter/Presenter/Classes/Animator/PresenterAnimator.h; sourceTree = "<group>"; };
+		6BDA66BF2503A6E1003A9DC58762FDD9 /* PresenterAnimatorOption.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterAnimatorOption.m; path = Presenter/Presenter/Classes/Animator/PresenterAnimatorOption.m; sourceTree = "<group>"; };
+		71B8BF70920491893109868F94B18D2E /* PresenterFlipHorizontalAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterFlipHorizontalAnimator.h; path = Presenter/Presenter/Classes/Animator/PresenterFlipHorizontalAnimator.h; sourceTree = "<group>"; };
+		76EA808D11485B34D65B21FD6084F94B /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A11178CA12ED8F7AC5AE2F86A3CA299 /* PresenterOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterOption.h; path = Presenter/Presenter/Classes/PresenterOption.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A46312B75CE4B57486600B876AA62329 /* PresenterVerticalAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterVerticalAnimator.m; path = Presenter/Presenter/Classes/Animator/PresenterVerticalAnimator.m; sourceTree = "<group>"; };
+		A65D7447867FA5ADC0800D9290F5C3D9 /* PresenterTransitionContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterTransitionContext.m; path = Presenter/Presenter/Classes/Animator/PresenterTransitionContext.m; sourceTree = "<group>"; };
+		A79AC23D5A157FED70D9C53D844B2319 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		A802001A8FF3B4F5AC4F344BCC332612 /* Presenter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Presenter-prefix.pch"; sourceTree = "<group>"; };
+		AFFEDE2A861DFD3D40C54DCDE6D3D938 /* PresentationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresentationController.h; path = Presenter/Presenter/Classes/PresentationController.h; sourceTree = "<group>"; };
+		B245A4D29093F39F891B010451722B71 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B50CE5574C62427AFF84BE78A864D383 /* PresenterVerticalAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterVerticalAnimator.h; path = Presenter/Presenter/Classes/Animator/PresenterVerticalAnimator.h; sourceTree = "<group>"; };
+		C4A217DE54FD19CA10ADEC281F9741AB /* PresenterHorizontalAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterHorizontalAnimator.m; path = Presenter/Presenter/Classes/Animator/PresenterHorizontalAnimator.m; sourceTree = "<group>"; };
+		C5ED48A82AF60A04BC84EF3FFF3D6B39 /* PresenterAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterAnimator.m; path = Presenter/Presenter/Classes/Animator/PresenterAnimator.m; sourceTree = "<group>"; };
+		D7CCF42D2FB0D7CA68F0AB7B5C2EE041 /* Presenter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Presenter-dummy.m"; sourceTree = "<group>"; };
+		E22BC887E777E9E9730CA1CAE7F0AEE5 /* Presenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Presenter.m; path = Presenter/Presenter/Classes/Presenter.m; sourceTree = "<group>"; };
+		E98FDEE8C45701AC145366388AE17B62 /* Presenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Presenter.xcconfig; sourceTree = "<group>"; };
+		EE4F489CFCBBD703D8E5FA71B1FAF3B5 /* PresenterHorizontalAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterHorizontalAnimator.h; path = Presenter/Presenter/Classes/Animator/PresenterHorizontalAnimator.h; sourceTree = "<group>"; };
+		EFC5B2E05B58CD826FD55659BF1D7E39 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C1BDD8F47DFE85EBC04745CC533FFE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71CC36706D5A94F7E489EF9FAEF2DA58 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		576D247B2104638807166F74978A1ABC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34E6014A6E9AB9FDC2E090E4606F1B70 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13A7E10AD00595EF487E2B982045749B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76EA808D11485B34D65B21FD6084F94B /* Pods_Example.framework */,
+				0DA2A0755C2CE206E885F63A43501CD2 /* Presenter.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B5ECB992A56AE0C70DC72D88BB90B05 /* Pods-Example */ = {
+			isa = PBXGroup;
+			children = (
+				5B81C04F8E84EAE60AE15C8695031A5F /* Info.plist */,
+				25A37D4D536CC5988A439441117C41F4 /* Pods-Example.modulemap */,
+				3ADE9E5655579DB0F79DC9C80758673C /* Pods-Example-acknowledgements.markdown */,
+				11434BC759D12F57876FBB74A4775E74 /* Pods-Example-acknowledgements.plist */,
+				1AD65E35A3233FBE6F2EFDEB3D43D114 /* Pods-Example-dummy.m */,
+				3F3EFEBDE6702DEFDFFF9D5C6DBC3773 /* Pods-Example-frameworks.sh */,
+				044AA3E23F71470C9B5F50D44720EA0D /* Pods-Example-resources.sh */,
+				15D3FE98E9F2D34863BD3F3597A0485A /* Pods-Example-umbrella.h */,
+				EFC5B2E05B58CD826FD55659BF1D7E39 /* Pods-Example.debug.xcconfig */,
+				A79AC23D5A157FED70D9C53D844B2319 /* Pods-Example.release.xcconfig */,
+			);
+			name = "Pods-Example";
+			path = "Target Support Files/Pods-Example";
+			sourceTree = "<group>";
+		};
+		6A4F6A14E3FB951290E4531728B7A461 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B5ECB992A56AE0C70DC72D88BB90B05 /* Pods-Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				9AD3389EAF22872B92C1E2566E16A74F /* Pods */,
+				13A7E10AD00595EF487E2B982045749B /* Products */,
+				6A4F6A14E3FB951290E4531728B7A461 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9AD3389EAF22872B92C1E2566E16A74F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9B5AD6EA6C91FB1E229D46F68A2536B /* Presenter */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E9B5AD6EA6C91FB1E229D46F68A2536B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AFFEDE2A861DFD3D40C54DCDE6D3D938 /* PresentationController.h */,
+				1A591339FBBA9A9364B43DFBB763C8FA /* PresentationController.m */,
+				2A3A453B0B51E3F4D520B60E60AD658C /* Presenter.h */,
+				E22BC887E777E9E9730CA1CAE7F0AEE5 /* Presenter.m */,
+				6BCF243BE9D8BDF02B1A0932088EF395 /* PresenterAnimator.h */,
+				C5ED48A82AF60A04BC84EF3FFF3D6B39 /* PresenterAnimator.m */,
+				507BF417AF2340E362D64FA9AA18F841 /* PresenterAnimatorOption.h */,
+				6BDA66BF2503A6E1003A9DC58762FDD9 /* PresenterAnimatorOption.m */,
+				134252A97AA7F24394E0415FA7FEAA58 /* PresenterCrossDissolveAnimator.h */,
+				59F73A9C5D3186CB9DF6A8563E5E001B /* PresenterCrossDissolveAnimator.m */,
+				71B8BF70920491893109868F94B18D2E /* PresenterFlipHorizontalAnimator.h */,
+				2B0360AFF9304E790EAC1CD923C13E40 /* PresenterFlipHorizontalAnimator.m */,
+				EE4F489CFCBBD703D8E5FA71B1FAF3B5 /* PresenterHorizontalAnimator.h */,
+				C4A217DE54FD19CA10ADEC281F9741AB /* PresenterHorizontalAnimator.m */,
+				8A11178CA12ED8F7AC5AE2F86A3CA299 /* PresenterOption.h */,
+				1AF73F0202A638AB2D9E592A462C4A36 /* PresenterOption.m */,
+				53CCE1DF88B14DDB16FEBAD1CE416D5E /* PresenterTransitionContext.h */,
+				A65D7447867FA5ADC0800D9290F5C3D9 /* PresenterTransitionContext.m */,
+				B50CE5574C62427AFF84BE78A864D383 /* PresenterVerticalAnimator.h */,
+				A46312B75CE4B57486600B876AA62329 /* PresenterVerticalAnimator.m */,
+				69F486C1ED4DFD876A8339FBDF1BFFB9 /* PresenterViewController.h */,
+				6247F07D98C37EC41BC69ABE285D46A9 /* PresenterViewController.m */,
+				3CB0FC487A1F5B194EF4CA4464C8C79C /* PresenterViewController+Show.h */,
+				6969B1E39B64CB4EB787374D6F02664A /* PresenterViewController+Show.m */,
+				1E2C033E4D4F53F6B52A5B93D8091462 /* SHPresenter.h */,
+				FCB205A6BF39E8838193880EBECB97B8 /* Support Files */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FCB205A6BF39E8838193880EBECB97B8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B245A4D29093F39F891B010451722B71 /* Info.plist */,
+				3DD20067487E06868CDF41A72D34CE2E /* Presenter.modulemap */,
+				E98FDEE8C45701AC145366388AE17B62 /* Presenter.xcconfig */,
+				D7CCF42D2FB0D7CA68F0AB7B5C2EE041 /* Presenter-dummy.m */,
+				A802001A8FF3B4F5AC4F344BCC332612 /* Presenter-prefix.pch */,
+				59FE944F94C4C3E851F58ADB105F50F7 /* Presenter-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Presenter";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		850A623368464C270D25D1F85210F81B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03DB59CC72A56E9974F3AA61725FCE4C /* Pods-Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A59913EA77D763F9956E9F15064CF5A2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7346830FA2B3FB7BA18AF9BF9DE181E0 /* PresentationController.h in Headers */,
+				218AD9EBFCED2D4C87B6A50118AC7F8A /* Presenter-umbrella.h in Headers */,
+				8C67984B6058A2B5B2404529D5786F0C /* Presenter.h in Headers */,
+				954E738DE11F2E5B6B54FFD811648945 /* PresenterAnimator.h in Headers */,
+				225EE018BFA3E41F052C6DE90FBAA44C /* PresenterAnimatorOption.h in Headers */,
+				9C330A44452ACAD7CB1253D441DA6726 /* PresenterCrossDissolveAnimator.h in Headers */,
+				21DA32701E33486A01FBEA8B01A345E9 /* PresenterFlipHorizontalAnimator.h in Headers */,
+				F6539EEDB2BCDF1B4040656A93178C5F /* PresenterHorizontalAnimator.h in Headers */,
+				CB2126325A75C74C9D60E44FADA78F93 /* PresenterOption.h in Headers */,
+				1D91F8E0CBEA97AE864FB4478A10F21D /* PresenterTransitionContext.h in Headers */,
+				ADDB6D60BC7A3F87EC315A005F7528BC /* PresenterVerticalAnimator.h in Headers */,
+				0ABE09344F579FA5E92DD53286FC5783 /* PresenterViewController+Show.h in Headers */,
+				039D6C84F760C6B9A4461D845D51E6AE /* PresenterViewController.h in Headers */,
+				92DA82FB3FD9FBC7A21F186DDCCE93F1 /* SHPresenter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		100C937EB40C35981A2593724E77B3E1 /* Pods-Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65AE2FF9261AA1AA77D0FD99951B8DCC /* Build configuration list for PBXNativeTarget "Pods-Example" */;
+			buildPhases = (
+				A351D7214C4900BDAA867AA8DC19D68D /* Sources */,
+				1C1BDD8F47DFE85EBC04745CC533FFE7 /* Frameworks */,
+				850A623368464C270D25D1F85210F81B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC4E674E116230491D2E90213C160CB6 /* PBXTargetDependency */,
+			);
+			name = "Pods-Example";
+			productName = "Pods-Example";
+			productReference = 76EA808D11485B34D65B21FD6084F94B /* Pods_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B4BDDC2398916CCE0F35DD6242EE73BF /* Presenter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAED9EC797D4C138A7070E4501D2646D /* Build configuration list for PBXNativeTarget "Presenter" */;
+			buildPhases = (
+				631BD3D1178CD77629ACF0483976935A /* Sources */,
+				576D247B2104638807166F74978A1ABC /* Frameworks */,
+				A59913EA77D763F9956E9F15064CF5A2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Presenter;
+			productName = Presenter;
+			productReference = 0DA2A0755C2CE206E885F63A43501CD2 /* Presenter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 13A7E10AD00595EF487E2B982045749B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				100C937EB40C35981A2593724E77B3E1 /* Pods-Example */,
+				B4BDDC2398916CCE0F35DD6242EE73BF /* Presenter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		631BD3D1178CD77629ACF0483976935A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0230CCE0F93816949C32DF8A6958278A /* PresentationController.m in Sources */,
+				F13BEDD79BB400B86389492C932ED543 /* Presenter-dummy.m in Sources */,
+				02C0D2BD50EB2B0962C5B486A8DC2A96 /* Presenter.m in Sources */,
+				2191162EFF2EB88A38EB35F5FA8E89EF /* PresenterAnimator.m in Sources */,
+				49BDA2C435DFC7D18C6AC47FD04CBA14 /* PresenterAnimatorOption.m in Sources */,
+				F3A8EAC91E56E0DE5305F19BF981A982 /* PresenterCrossDissolveAnimator.m in Sources */,
+				409819DBC6185C77D146E484450E91E4 /* PresenterFlipHorizontalAnimator.m in Sources */,
+				D500B6DE3D99D3E8F71D173C30FC93F6 /* PresenterHorizontalAnimator.m in Sources */,
+				AEE88854968EA9B57E17A1D062874BFF /* PresenterOption.m in Sources */,
+				A21BDC71EF953907EA3108D471490CEB /* PresenterTransitionContext.m in Sources */,
+				C3557A9B996862AD7B1CF3F0EDAE3C0B /* PresenterVerticalAnimator.m in Sources */,
+				EF08803C17E0CA6CA601749F1867B030 /* PresenterViewController+Show.m in Sources */,
+				E7E21869461DC823E7BE1CD4098E8935 /* PresenterViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A351D7214C4900BDAA867AA8DC19D68D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23380F88048360D4C11C8BAE9D04B9AD /* Pods-Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC4E674E116230491D2E90213C160CB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Presenter;
+			target = B4BDDC2398916CCE0F35DD6242EE73BF /* Presenter */;
+			targetProxy = 0343291612051E5F4E5F8C0A7101E207 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		199D972A13F2B4C56847F7A89CCA83BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		AB7BBF9B234C5FFAF6536AB09B208E04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFC5B2E05B58CD826FD55659BF1D7E39 /* Pods-Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Example/Pods-Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CDDDB42AA9F2FAE44E0DCA853A532C57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E98FDEE8C45701AC145366388AE17B62 /* Presenter.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Presenter/Presenter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Presenter/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Presenter/Presenter.modulemap";
+				PRODUCT_MODULE_NAME = Presenter;
+				PRODUCT_NAME = Presenter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D6A303606C61812C7D8866C71D1900CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E98FDEE8C45701AC145366388AE17B62 /* Presenter.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Presenter/Presenter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Presenter/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Presenter/Presenter.modulemap";
+				PRODUCT_MODULE_NAME = Presenter;
+				PRODUCT_NAME = Presenter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F3AAFBE5F6288E4921DA003E9B2E007F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A79AC23D5A157FED70D9C53D844B2319 /* Pods-Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Example/Pods-Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FDB2FC4A1E5891381CD9D922145497F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				199D972A13F2B4C56847F7A89CCA83BC /* Debug */,
+				FDB2FC4A1E5891381CD9D922145497F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65AE2FF9261AA1AA77D0FD99951B8DCC /* Build configuration list for PBXNativeTarget "Pods-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB7BBF9B234C5FFAF6536AB09B208E04 /* Debug */,
+				F3AAFBE5F6288E4921DA003E9B2E007F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAED9EC797D4C138A7070E4501D2646D /* Build configuration list for PBXNativeTarget "Presenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6A303606C61812C7D8866C71D1900CC /* Debug */,
+				CDDDB42AA9F2FAE44E0DCA853A532C57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

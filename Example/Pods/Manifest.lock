@@ -1,0 +1,22 @@
+PODS:
+  - Presenter (0.0.1)
+
+DEPENDENCIES:
+  - Presenter (from `https://github.com/seahuai/Presenter.git`, branch `0.0.1`)
+
+EXTERNAL SOURCES:
+  Presenter:
+    :branch: 0.0.1
+    :git: https://github.com/seahuai/Presenter.git
+
+CHECKOUT OPTIONS:
+  Presenter:
+    :commit: a3e5b2166793a552ddebb01a235009d1e4db858c
+    :git: https://github.com/seahuai/Presenter.git
+
+SPEC CHECKSUMS:
+  Presenter: ab6744ca38152d12024f4cce05173fec45ab7cf7
+
+PODFILE CHECKSUM: 0ca6aef66c7c1a23a305fe6c9bf61bf7de46e02f
+
+COCOAPODS: 1.5.3
