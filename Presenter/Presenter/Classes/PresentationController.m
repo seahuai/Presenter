@@ -7,19 +7,39 @@
 //
 
 #import "PresentationController.h"
+#import "PresenterViewController.h"
 
 @interface PresentationController () {
-    PresenterPresentationType _presentationType;
-    PresenterTransitionStyle _transitionStyle;
-    PresenterTransitionStyle _dismissTransitionStyle;
     UIView *_backgroundView;
     UIVisualEffectView *_visualEffectView;
     CGSize _presentedViewSize;
 }
 
+@property (nonatomic, strong) PresenterOption *option;
+
 @end
 
 @implementation PresentationController
+
+
+- (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController
+                       presentingViewController:(UIViewController *)presentingViewController
+                                presenterOption:(PresenterOption *)option {
+    self = [super initWithPresentedViewController:presentedViewController presentingViewController:presentingViewController];
+    if (self) {
+        _option = option;
+        _presentedViewSize = self.option.presentedViewSize;
+        _backgroundView = option.backgroundView;
+        if (!_backgroundView) {
+            [self setupBackgrounWithColor:option.backgroundColor
+                                  opacity:option.backgroundColorOpacity
+                           blurBackground:option.blurBackground
+                                blurStyle:option.backgroundBlurStyle
+                             dismissOnTap:option.dismissOnTap];
+        }
+    }
+    return self;
+}
 
 - (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController
                        presentingViewController:(UIViewController *)presentingViewController
@@ -34,19 +54,18 @@
                                  backgroundView:(UIView *)backgroundView
                                    dismissOnTap:(BOOL)dismissOnTap
 {
-    self = [super initWithPresentedViewController:presentedViewController presentingViewController:presentingViewController];
-    if (self) {
-        _presentationType = presentationType;
-        _transitionStyle = transitionStyle;
-        _dismissTransitionStyle = dismissTransitionStyle;
-        _backgroundView = backgroundView;
-        _presentedViewSize = presentedViewSize;
-        if (!backgroundView) {
-            [self setupBackgrounWithColor:backgroundColor opacity:backgroundOpacity blurBackground:isBlurBackground blurStyle:backgroundBlurStyle dismissOnTap:dismissOnTap];
-        }
-        
-    }
-    return self;
+    
+    PresenterOption *option = [PresenterOption defaultOption];
+    option.presentationType = presentationType;
+    option.transitionStyle = transitionStyle;
+    option.dismissTransitionStyle = dismissTransitionStyle;
+    option.backgroundColor = backgroundColor;
+    option.backgroundColorOpacity = backgroundOpacity;
+    option.blurBackground = isBlurBackground;
+    option.backgroundBlurStyle = backgroundBlurStyle;
+    option.backgroundView = backgroundView;
+    option.dismissOnTap = dismissOnTap;
+    return [self initWithPresentedViewController:presentedViewController presentingViewController:presentingViewController presenterOption:option];
 }
 
 #pragma mark BackgroundView
@@ -106,7 +125,7 @@
         return;
     }
     
-    if (_transitionStyle == PresenterTransitionStyleWithoutAnimation) {
+    if (self.option.transitionStyle == PresenterTransitionStyleWithoutAnimation) {
         _backgroundView.alpha = 1;
     }else {
         [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
@@ -127,7 +146,7 @@
         _backgroundView.alpha = 0;
         return;
     }
-    if (_dismissTransitionStyle == PresenterTransitionStyleWithoutAnimation) {
+    if (self.option.transitionStyle == PresenterTransitionStyleWithoutAnimation) {
         _backgroundView.alpha = 0;
     }else {
         [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
@@ -136,30 +155,37 @@
     }
 }
 
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    BOOL isLandscape = size.width > size.height;
+    if ([self.presentedViewController conformsToProtocol:@protocol(PresenterViewController)]) {
+        
+    }
+}
+
 - (CGPoint)presentedViewOrigin {
     CGPoint origin = CGPointZero;
     CGSize containerSize = self.containerView.frame.size;
     
-    if (_presentationType == PresenterPresentationTypeCenter) {
+    if (self.option.presentationType == PresenterPresentationTypeCenter) {
         
         origin = CGPointMake((containerSize.width - _presentedViewSize.width) * 0.5,
                              (containerSize.height - _presentedViewSize.height) * 0.5);
         
-    }else if (_presentationType == PresenterPresentationTypeBottom) {
+    }else if (self.option.presentationType == PresenterPresentationTypeBottom) {
         
         origin = CGPointMake((containerSize.width - _presentedViewSize.width) * 0.5,
                              containerSize.height - _presentedViewSize.height);
         
-    }else if (_presentationType == PresenterPresentationTypeTop) {
+    }else if (self.option.presentationType == PresenterPresentationTypeTop) {
         
         origin = CGPointMake((containerSize.width - _presentedViewSize.width) * 0.5, 0);
         
-    }else if (_presentationType == PresenterPresentationTypeLeft) {
+    }else if (self.option.presentationType == PresenterPresentationTypeLeft) {
         
         origin = CGPointMake(0, (containerSize.height - _presentedViewSize.height) * 0.5);
         
         
-    }else if (_presentationType == PresenterPresentationTypeRight) {
+    }else if (self.option.presentationType == PresenterPresentationTypeRight) {
         
         origin = CGPointMake((containerSize.width - _presentedViewSize.width),
                              (containerSize.height - _presentedViewSize.height) * 0.5);
@@ -174,7 +200,7 @@
 
 #pragma mark Action
 - (void)backgroundViewTapped:(UITapGestureRecognizer *)gestureRecognize {
-    BOOL dismissAnimated = !(_dismissTransitionStyle == PresenterTransitionStyleWithoutAnimation);
+    BOOL dismissAnimated = !(self.option.transitionStyle == PresenterTransitionStyleWithoutAnimation);
     [self.presentedViewController dismissViewControllerAnimated:dismissAnimated completion:nil];
 }
 

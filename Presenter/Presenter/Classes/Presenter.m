@@ -20,17 +20,16 @@
 
 @implementation Presenter
 
+- (instancetype)initWithPresenterOption:(PresenterOption *)option {
+    if (self = [super init]) {
+        _option = option;
+    }
+    return self;
+}
+
 - (instancetype)init {
     if (self = [super init]) {
-        _presentationType = PresenterPresentationTypeCenter;
-        _transitionStyle = PresenterTransitionStyleCrossDissolve;
-        _dismissTransitionStyle = PresenterTransitionStyleCrossDissolve;
-        _backgroundColor = [UIColor blackColor];
-        _backgroundColorOpacity = 0.6f;
-        _blurBackground = false;
-        _backgroundBlurStyle = UIBlurEffectStyleDark;
-        _backgroundView = nil;
-        _dismissOnTap = true;
+        _option = [PresenterOption defaultOption];
     }
     return self;
 }
@@ -39,7 +38,7 @@
              inViewController:(UIViewController*)presentingViewController {
     presentedViewController.transitioningDelegate = self;
     presentedViewController.modalPresentationStyle = UIModalPresentationCustom;
-    BOOL animated = !(self.transitionStyle == PresenterTransitionStyleWithoutAnimation);
+    BOOL animated = !(self.option.transitionStyle == PresenterTransitionStyleWithoutAnimation);
     if (presentingViewController) {
         [presentingViewController presentViewController:presentedViewController animated:animated completion:nil];
     }
@@ -47,7 +46,7 @@
 }
 
 - (void)dismiss {
-    BOOL animated = !(self.dismissTransitionStyle == PresenterTransitionStyleWithoutAnimation);
+    BOOL animated = !(self.option.dismissTransitionStyle == PresenterTransitionStyleWithoutAnimation);
     if (_presentedViewController) {
         [_presentedViewController dismissViewControllerAnimated:animated completion:nil];
     }
@@ -57,21 +56,23 @@
 #pragma mark Setter
 - (void)setTransitionStyle:(PresenterTransitionStyle)transitionStyle {
     // set default dismiss transiton style accroding to transtion style
-    _transitionStyle = transitionStyle;
-    _dismissTransitionStyle = transitionStyle;
+   self.option.transitionStyle = transitionStyle;
+   self.option.dismissTransitionStyle = transitionStyle;
 }
 
 #pragma mark UIViewControllerTransitioningDelegate
 - (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source {
-    return [[PresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting presentedViewSize:self.presentedViewSize presentationType:self.presentationType transitionStyle:self.transitionStyle dismissTransiotionStyle:self.dismissTransitionStyle backgroundColor:self.backgroundColor backgroundOpacity:self.backgroundColorOpacity blurBackground:self.blurBackground backgroundBlurStyle:self.backgroundBlurStyle backgroundView:self.backgroundView dismissOnTap:self.dismissOnTap];
+    return [[PresentationController alloc] initWithPresentedViewController:presented
+                                                  presentingViewController:presenting
+                                                           presenterOption:self.option];
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
-    return [PresenterAnimator presenterAnimatorForTransitionStyle:self.transitionStyle];
+    return [PresenterAnimator presenterAnimatorForTransitionStyle:self.option.transitionStyle];
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
-    return [PresenterAnimator presenterAnimatorForTransitionStyle:self.dismissTransitionStyle];
+    return [PresenterAnimator presenterAnimatorForTransitionStyle:self.option.dismissTransitionStyle];
 }
 
 

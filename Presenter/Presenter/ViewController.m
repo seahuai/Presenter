@@ -21,11 +21,7 @@
     ViewController *viewController = [ViewController new];
     viewController.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     _presenter = [Presenter new];
-    self.presenter.presentedViewSize = CGSizeMake(100, 200);
-    self.presenter.presentationType = PresenterPresentationTypeCenter;
-    self.presenter.transitionStyle = PresenterTransitionStyleVerticalFromTop;
-//    self.presenter.dismissTransitionStyle = PresenterTransitionStyleHorizontalFromLeft;
-//    self.presenter.blurBackground = YES;
+    _presenter.option.presentedViewSize = CGSizeMake(100, 200);
     [self.presenter presentViewController:viewController inViewController:self];
 }
 

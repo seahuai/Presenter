@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Presenter.h"
+#import "PresenterOption.h"
 
 @interface PresentationController : UIPresentationController
+
+@property (nonatomic, strong, readonly) PresenterOption *option;
+
+
+- (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController
+                       presentingViewController:(UIViewController *)presentingViewController
+                                presenterOption:(PresenterOption *)presenterOption;
 
 - (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController
                        presentingViewController:(UIViewController *)presentingViewController
@@ -23,16 +30,5 @@
                             backgroundBlurStyle:(UIBlurEffectStyle)backgroundBlurStyle
                                  backgroundView:(UIView *)backgroundView
                                    dismissOnTap:(BOOL)dismissOnTap;
-// chain
-/*
- - (PresentationController* (^)(PresenterPresentationType))presentationType;
- - (PresentationController* (^)(PresenterTransitionStyle))transitionStyle;
- - (PresentationController* (^)(PresenterTransitionStyle))dismissTransitionStyle;
- - (PresentationController* (^)(UIColor*))backgroundColor;
- - (PresentationController* (^)(CGFloat))backgroundOpacity;
- - (PresentationController* (^)(UIBlurEffectStyle))backgroundBlurStyle;
- - (PresentationController* (^)(UIView *))backgroundView;
- - (PresentationController* (^)(BOOL))dismissOnTap;
 
- */
 @end
