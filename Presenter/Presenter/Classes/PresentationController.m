@@ -156,15 +156,20 @@
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
-    BOOL isLandscape = size.width > size.height;
-    if ([self.presentedViewController conformsToProtocol:@protocol(PresenterViewController)]) {
-        
-    }
+//    if ([self.presentedViewController conformsToProtocol:@protocol(PresenterViewController)]) {
+//        id<PresenterViewController> vc = (id<PresenterViewController>)self.presentedViewController;
+//        _presentedViewSize = [vc presentedViewSizeForContainerSize:size];
+//    }
 }
 
 - (CGPoint)presentedViewOrigin {
     CGPoint origin = CGPointZero;
     CGSize containerSize = self.containerView.frame.size;
+    
+    if ([self.presentedViewController conformsToProtocol:@protocol(PresenterViewController)]) {
+        id<PresenterViewController> vc = (id<PresenterViewController>)self.presentedViewController;
+        _presentedViewSize = [vc presentedViewSizeForContainerSize:containerSize];
+    }
     
     if (self.option.presentationType == PresenterPresentationTypeCenter) {
         

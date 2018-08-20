@@ -53,13 +53,6 @@
     // call topViewController dismiss method
 }
 
-#pragma mark Setter
-- (void)setTransitionStyle:(PresenterTransitionStyle)transitionStyle {
-    // set default dismiss transiton style accroding to transtion style
-   self.option.transitionStyle = transitionStyle;
-   self.option.dismissTransitionStyle = transitionStyle;
-}
-
 #pragma mark UIViewControllerTransitioningDelegate
 - (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source {
     return [[PresentationController alloc] initWithPresentedViewController:presented

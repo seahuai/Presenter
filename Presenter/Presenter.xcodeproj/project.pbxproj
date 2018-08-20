@@ -123,9 +123,9 @@
 				357F488E2127CB0B00CE33C3 /* AppDelegate.m */,
 				357F48902127CB0B00CE33C3 /* ViewController.h */,
 				357F48912127CB0B00CE33C3 /* ViewController.m */,
+				357F48982127CB0C00CE33C3 /* LaunchScreen.storyboard */,
 				357F48932127CB0B00CE33C3 /* Main.storyboard */,
 				357F48962127CB0C00CE33C3 /* Assets.xcassets */,
-				357F48982127CB0C00CE33C3 /* LaunchScreen.storyboard */,
 				357F489B2127CB0C00CE33C3 /* Info.plist */,
 				357F489C2127CB0C00CE33C3 /* main.m */,
 			);

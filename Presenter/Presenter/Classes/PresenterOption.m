@@ -29,4 +29,9 @@
     return self;
 }
 
+- (void)setTransitionStyle:(PresenterTransitionStyle)transitionStyle {
+    _transitionStyle = transitionStyle;
+    _dismissTransitionStyle = transitionStyle;
+}
+
 @end
