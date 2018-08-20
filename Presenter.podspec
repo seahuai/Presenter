@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.author             = { "zhangsihuai" => "seahuai@foxmail.com" }
   s.platform     = :ios
   s.ios.deployment_target = "9.0"
-  s.source       = { :git => "https://github.com/seahuai/Presenter.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/seahuai/Presenter.git" }
   s.source_files  = "Presenter/Presenter/Classes/**/*.{h,m}"
   s.exclude_files = "Classes/Exclude"
 
