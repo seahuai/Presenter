@@ -37,6 +37,7 @@
                                 blurStyle:option.backgroundBlurStyle
                              dismissOnTap:option.dismissOnTap];
         }
+        [self registerKeyboardNotification];
     }
     return self;
 }
@@ -94,11 +95,29 @@
 
 #pragma mark KeyboardNotification
 - (void)registerKeyboardNotification {
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
-- (void)handleKeyboardNotification:(NSNotification *)notification {
-    
+- (void)keyboardWillShow:(NSNotification *)notification {
+    NSTimeInterval duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    CGRect keyboardEndFrame = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    // 判断有没有遮挡
+    CGRect intersectionRect = CGRectIntersection(self.presentedView.frame, keyboardEndFrame);
+    if (!CGRectEqualToRect(intersectionRect, CGRectZero)) {
+        CGRect frame = self.presentedView.frame;
+        frame.origin.y -= intersectionRect.size.height;
+        [UIView animateWithDuration:duration animations:^{
+            self.presentedView.frame = frame;
+        } completion:nil];
+    }
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+    NSTimeInterval duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    [UIView animateWithDuration:duration animations:^{
+        self.presentedView.frame = [self presentedViewFrame];
+    } completion:nil];
 }
 
 #pragma mark Presentation
@@ -141,6 +160,7 @@
 }
 
 - (void)dismissalTransitionWillBegin {
+    [self.presentedView endEditing:true];
     id<UIViewControllerTransitionCoordinator> coordinator = self.presentedViewController.transitionCoordinator;
     if (!coordinator) {
         _backgroundView.alpha = 0;
