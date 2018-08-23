@@ -42,4 +42,21 @@
     }
 }
 
+- (void)config:(PresenterOption *)newOption {
+    if (!newOption) {
+        return;
+    }
+    self.presentationPosition = newOption.presentationPosition;
+    self.transitionStyle = newOption.transitionStyle;
+    self.dismissTransitionStyle = newOption.dismissTransitionStyle;
+    self.backgroundColor = newOption.backgroundColor;
+    self.backgroundColorOpacity = newOption.backgroundColorOpacity;
+    self.blurBackground = newOption.blurBackground;
+    self.backgroundBlurStyle = UIBlurEffectStyleDark;
+    self.backgroundView = newOption.backgroundView;
+    self.dismissOnTap = newOption.dismissOnTap;
+    self.cornerRadius = newOption.cornerRadius;
+    self.corners = newOption.corners;
+}
+
 @end

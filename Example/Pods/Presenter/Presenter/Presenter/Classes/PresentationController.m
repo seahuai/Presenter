@@ -195,8 +195,7 @@
         }
     }
     
-    self.option = newOption;
-    
+    [self.option config:newOption];
 }
 
 - (CGPoint)presentedViewOrigin {
