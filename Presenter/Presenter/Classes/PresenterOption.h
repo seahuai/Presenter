@@ -54,6 +54,8 @@ typedef NS_ENUM(NSUInteger, PresenterTransitionStyle) {
 
 @property (nonatomic, assign) UIRectCorner corners;
 
+- (void)config:(PresenterOption *)newOption;
+
 // chain
 // - (PresenterOption* (^)(PresenterPresentationType))presentationType;
 // - (PresenterOption* (^)(PresenterTransitionStyle))transitionStyle;
