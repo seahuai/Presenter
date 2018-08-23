@@ -16,9 +16,17 @@
 - (PresenterManager *)innerPresenterManager {
     PresenterManager *_presenterMgr = objc_getAssociatedObject(self, @selector(innerPresenterManager));
     if (!_presenterMgr) {
-        _presenterMgr = [[PresenterManager alloc] initWithPresenterOption:self.presenterOption];
+        PresenterOption *option = [self presenterOption];
+        _presenterMgr = [[PresenterManager alloc] initWithPresenterOption:option];
         objc_setAssociatedObject(self, @selector(innerPresenterManager), _presenterMgr, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
+    
+    if ([self respondsToSelector:@selector(presenterOptionForLandscapeMode:)]) {
+        BOOL isLandscape = self.view.bounds.size.width > self.view.bounds.size.height;
+        PresenterOption *option = [self presenterOptionForLandscapeMode:isLandscape];
+        _presenterMgr.option = option;
+    }
+    
     return _presenterMgr;
 }
 

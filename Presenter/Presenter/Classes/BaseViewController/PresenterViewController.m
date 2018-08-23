@@ -14,6 +14,7 @@
 
 @implementation PresenterViewController
 
+// default implementation
 - (PresenterOption *)presenterOption {
     return [PresenterOption defaultOption];
 }

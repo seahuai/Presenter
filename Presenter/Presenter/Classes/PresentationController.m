@@ -92,6 +92,16 @@
     }
 }
 
+- (void)setupCorner {
+    if (_option.cornerRadius) {
+        CGFloat cornerRadius = _option.cornerRadius;
+        UIBezierPath *cornerPath = [UIBezierPath bezierPathWithRoundedRect:self.presentedView.bounds byRoundingCorners:_option.corners cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
+        CAShapeLayer *maskLayer = [CAShapeLayer new];
+        maskLayer.path = cornerPath.CGPath;
+        self.presentedView.layer.mask = maskLayer;
+    }
+}
+
 
 #pragma mark KeyboardNotification
 - (void)registerKeyboardNotification {
@@ -126,14 +136,7 @@
     _backgroundView.frame = self.containerView.bounds;
     _visualEffectView.frame = self.containerView.bounds;
     self.presentedView.frame = [self presentedViewFrame];
-    if (_option.cornerRadius) {
-        CGFloat cornerRadius = _option.cornerRadius;
-        UIBezierPath *cornerPath = [UIBezierPath bezierPathWithRoundedRect:self.presentedView.bounds byRoundingCorners:_option.corners cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
-        CAShapeLayer *maskLayer = [CAShapeLayer new];
-        maskLayer.path = cornerPath.CGPath;
-        self.presentedView.layer.mask = maskLayer;
-    }
-    
+    [self setupCorner];
 }
 
 - (void)presentationTransitionWillBegin {
@@ -183,10 +186,17 @@
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
-//    if ([self.presentedViewController conformsToProtocol:@protocol(PresenterViewController)]) {
-//        id<PresenterViewController> vc = (id<PresenterViewController>)self.presentedViewController;
-//        _presentedViewSize = [vc presentedViewSizeForContainerSize:size];
-//    }
+    BOOL isLandscape = size.width > size.height;
+    PresenterOption *newOption = self.option;
+    if ([self.presentedViewController conformsToProtocol:@protocol(PresenterViewController)]) {
+        id<PresenterViewController> vc = (id<PresenterViewController>)self.presentedViewController;
+        if ([(id)vc respondsToSelector:@selector(presenterOptionForLandscapeMode:)]) {
+            newOption = [vc presenterOptionForLandscapeMode:isLandscape];
+        }
+    }
+    
+    self.option = newOption;
+    
 }
 
 - (CGPoint)presentedViewOrigin {

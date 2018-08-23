@@ -15,6 +15,11 @@
 
 - (CGSize)presentedViewSizeForContainerSize:(CGSize)containerSize;
 
+@optional
+
+// 如果实现了该方法，就不会去调用-presentationOption方法
+- (PresenterOption *)presenterOptionForLandscapeMode:(BOOL)isLandscape;
+
 @end
 
 
