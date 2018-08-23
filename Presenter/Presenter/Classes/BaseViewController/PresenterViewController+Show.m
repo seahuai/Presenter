@@ -7,26 +7,26 @@
 //
 
 #import "PresenterViewController+Show.h"
-#import "Presenter.h"
+#import "PresenterManager.h"
 #import "UIViewController+Top.h"
 #import <objc/runtime.h>
 
 @implementation PresenterViewController (Show)
 
-- (Presenter *)innerPresenter {
-    Presenter *_presenter = objc_getAssociatedObject(self, @selector(innerPresenter));
-    if (!_presenter) {
-        _presenter = [[Presenter alloc] initWithPresenterOption:self.presenterOption];
-        objc_setAssociatedObject(self, @selector(innerPresenter), _presenter, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (PresenterManager *)innerPresenterManager {
+    PresenterManager *_presenterMgr = objc_getAssociatedObject(self, @selector(innerPresenterManager));
+    if (!_presenterMgr) {
+        _presenterMgr = [[PresenterManager alloc] initWithPresenterOption:self.presenterOption];
+        objc_setAssociatedObject(self, @selector(innerPresenterManager), _presenterMgr, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
-    return _presenter;
+    return _presenterMgr;
 }
 
 - (void)showInViewController:(UIViewController *)viewController {
     if (viewController) {
-        [self.innerPresenter presentViewController:self inViewController:viewController];
+        [self.innerPresenterManager presentViewController:self inViewController:viewController];
     }else {
-        [self.innerPresenter presentViewController:self inViewController:[UIViewController topViewController]];
+        [self.innerPresenterManager presentViewController:self inViewController:[UIViewController topViewController]];
     }
 }
 
@@ -35,7 +35,7 @@
 }
 
 - (void)hide {
-    [self.innerPresenter dismiss];
+    [self.innerPresenterManager dismiss];
 }
 
 @end

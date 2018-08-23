@@ -6,12 +6,12 @@
 //  Copyright © 2018年 张思槐. All rights reserved.
 //
 
-#import "Presenter.h"
+#import "PresenterManager.h"
 #import "PresentationController.h"
 #import "PresenterAnimator.h"
 #import "UIViewController+Top.h"
 
-@interface Presenter () <UIViewControllerTransitioningDelegate>
+@interface PresenterManager () <UIViewControllerTransitioningDelegate>
 
 @property (nonatomic, weak) UIViewController *presentedViewController;
 
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation Presenter
+@implementation PresenterManager
 
 - (instancetype)initWithPresenterOption:(PresenterOption *)option {
     if (self = [super init]) {
