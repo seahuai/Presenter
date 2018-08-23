@@ -12,4 +12,8 @@
 
 - (void)showInViewController:(UIViewController *)viewController;
 
+- (void)show;
+
+- (void)hide;
+
 @end

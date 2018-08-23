@@ -8,6 +8,7 @@
 
 #import "PresenterViewController+Show.h"
 #import "Presenter.h"
+#import "UIViewController+Top.h"
 #import <objc/runtime.h>
 
 @implementation PresenterViewController (Show)
@@ -22,7 +23,19 @@
 }
 
 - (void)showInViewController:(UIViewController *)viewController {
-    [self.innerPresenter presentViewController:self inViewController:viewController];
+    if (viewController) {
+        [self.innerPresenter presentViewController:self inViewController:viewController];
+    }else {
+        [self.innerPresenter presentViewController:self inViewController:[UIViewController topViewController]];
+    }
+}
+
+- (void)show {
+    [self showInViewController:nil];
+}
+
+- (void)hide {
+    [self.innerPresenter dismiss];
 }
 
 @end

@@ -15,8 +15,11 @@
 
 - (instancetype)initWithPresenterOption:(PresenterOption *)option;
 
-// 暂时对外暴露
 - (void)presentViewController:(UIViewController*)presentedViewController
              inViewController:(UIViewController*)presentingViewController;
+
+- (void)presentViewController:(UIViewController*)presentedViewController;
+
+- (void)dismiss;
 
 @end
