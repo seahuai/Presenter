@@ -126,6 +126,13 @@
     _backgroundView.frame = self.containerView.bounds;
     _visualEffectView.frame = self.containerView.bounds;
     self.presentedView.frame = [self presentedViewFrame];
+    if (_option.cornerRadius) {
+        CGFloat cornerRadius = _option.cornerRadius;
+        UIBezierPath *cornerPath = [UIBezierPath bezierPathWithRoundedRect:self.presentedView.bounds byRoundingCorners:_option.corners cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
+        CAShapeLayer *maskLayer = [CAShapeLayer new];
+        maskLayer.path = cornerPath.CGPath;
+        self.presentedView.layer.mask = maskLayer;
+    }
     
 }
 

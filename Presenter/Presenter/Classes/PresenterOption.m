@@ -25,6 +25,8 @@
         _backgroundBlurStyle = UIBlurEffectStyleDark;
         _backgroundView = nil;
         _dismissOnTap = true;
+        _cornerRadius = 0;
+        _corners = UIRectCornerAllCorners;
     }
     return self;
 }
@@ -32,6 +34,12 @@
 - (void)setTransitionStyle:(PresenterTransitionStyle)transitionStyle {
     _transitionStyle = transitionStyle;
     _dismissTransitionStyle = transitionStyle;
+}
+
+- (void)setCornerRadius:(CGFloat)cornerRadius {
+    if (cornerRadius > 0) {
+        _cornerRadius = cornerRadius;
+    }
 }
 
 @end

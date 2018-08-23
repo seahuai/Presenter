@@ -50,6 +50,10 @@ typedef NS_ENUM(NSUInteger, PresenterTransitionStyle) {
 
 @property (nonatomic, assign) BOOL dismissOnTap;
 
+@property (nonatomic, assign) CGFloat cornerRadius;
+
+@property (nonatomic, assign) UIRectCorner corners;
+
 // chain
 // - (PresenterOption* (^)(PresenterPresentationType))presentationType;
 // - (PresenterOption* (^)(PresenterTransitionStyle))transitionStyle;
