@@ -7,37 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0230CCE0F93816949C32DF8A6958278A /* PresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A591339FBBA9A9364B43DFBB763C8FA /* PresentationController.m */; };
-		02C0D2BD50EB2B0962C5B486A8DC2A96 /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E22BC887E777E9E9730CA1CAE7F0AEE5 /* Presenter.m */; };
-		039D6C84F760C6B9A4461D845D51E6AE /* PresenterViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 69F486C1ED4DFD876A8339FBDF1BFFB9 /* PresenterViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03DB59CC72A56E9974F3AA61725FCE4C /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 15D3FE98E9F2D34863BD3F3597A0485A /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0ABE09344F579FA5E92DD53286FC5783 /* PresenterViewController+Show.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB0FC487A1F5B194EF4CA4464C8C79C /* PresenterViewController+Show.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D91F8E0CBEA97AE864FB4478A10F21D /* PresenterTransitionContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 53CCE1DF88B14DDB16FEBAD1CE416D5E /* PresenterTransitionContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		218AD9EBFCED2D4C87B6A50118AC7F8A /* Presenter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 59FE944F94C4C3E851F58ADB105F50F7 /* Presenter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2191162EFF2EB88A38EB35F5FA8E89EF /* PresenterAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C5ED48A82AF60A04BC84EF3FFF3D6B39 /* PresenterAnimator.m */; };
-		21DA32701E33486A01FBEA8B01A345E9 /* PresenterFlipHorizontalAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 71B8BF70920491893109868F94B18D2E /* PresenterFlipHorizontalAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		225EE018BFA3E41F052C6DE90FBAA44C /* PresenterAnimatorOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 507BF417AF2340E362D64FA9AA18F841 /* PresenterAnimatorOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		05E46A4D44AE72F8A13D260323934924 /* UIViewController+Top.m in Sources */ = {isa = PBXBuildFile; fileRef = 46029BF2ADB532C1B6F9CA3157E78B21 /* UIViewController+Top.m */; };
+		15471E1CF15D7686AE2F74337C6F4819 /* PresenterCrossDissolveAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CE50A8E99E75D0C72F10528664B16AC /* PresenterCrossDissolveAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17F258E5E54E800F3C251742AAF77403 /* PresenterViewController+Show.h in Headers */ = {isa = PBXBuildFile; fileRef = F2875FF044AF23A968B3CBCCE9F4E563 /* PresenterViewController+Show.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E5BC48EF5650B85F423A89781DE1DAB /* PresenterCrossDissolveAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F49CEB72A6C7D740EC68A56320F6150 /* PresenterCrossDissolveAnimator.m */; };
 		23380F88048360D4C11C8BAE9D04B9AD /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AD65E35A3233FBE6F2EFDEB3D43D114 /* Pods-Example-dummy.m */; };
+		294D357023791793FFB2436272A5A2D6 /* PresenterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A8A3425D63A6C2273D62E1D2A40045E /* PresenterManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		34E6014A6E9AB9FDC2E090E4606F1B70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		409819DBC6185C77D146E484450E91E4 /* PresenterFlipHorizontalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0360AFF9304E790EAC1CD923C13E40 /* PresenterFlipHorizontalAnimator.m */; };
-		49BDA2C435DFC7D18C6AC47FD04CBA14 /* PresenterAnimatorOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDA66BF2503A6E1003A9DC58762FDD9 /* PresenterAnimatorOption.m */; };
+		4631BABA21D582257B60EE608B0D5071 /* PresenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1948D66CB6C7C845C77A9E23E25A11 /* PresenterViewController.m */; };
+		47D76B50BACBAF929FE1916744F866B6 /* PresenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D4225271624B3402D7E125B4A806FD69 /* PresenterManager.m */; };
+		4B5ECFCC5A75D50439AF58FD3F8CC645 /* PresenterFlipHorizontalAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = A8221D7EBC0D770B44C05E34E146634C /* PresenterFlipHorizontalAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E88EF2EE87CD87B3ADCE0F3FA1CC55F /* PresenterAnimatorOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B89C370B89178C18A4531856F8304A /* PresenterAnimatorOption.m */; };
+		50F9CBBB55E5C3338388E485A71813A1 /* PresenterOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 740EC1BAD91D8884C23F68820E37101F /* PresenterOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52FDBCD4D0A095682E0723B33C0B7E63 /* UIViewController+Top.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E8896AA6E3979D22A17E282EB293BD3 /* UIViewController+Top.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6740409EFF17995E8D77A223B12B2EC4 /* PresenterViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 53652D508E5F65CA343A55754AC38799 /* PresenterViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A844BF7157E4739C9AF373AAF17150D /* PresentationController.h in Headers */ = {isa = PBXBuildFile; fileRef = ED360CAC31271DABE3F1E13D517A45EA /* PresentationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6BFDAA15CD81EDB7AB13A974F2689EE5 /* Presenter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D21253954E150C265A898377CAF397B1 /* Presenter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		71CC36706D5A94F7E489EF9FAEF2DA58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		7346830FA2B3FB7BA18AF9BF9DE181E0 /* PresentationController.h in Headers */ = {isa = PBXBuildFile; fileRef = AFFEDE2A861DFD3D40C54DCDE6D3D938 /* PresentationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8C67984B6058A2B5B2404529D5786F0C /* Presenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A3A453B0B51E3F4D520B60E60AD658C /* Presenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92DA82FB3FD9FBC7A21F186DDCCE93F1 /* SHPresenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E2C033E4D4F53F6B52A5B93D8091462 /* SHPresenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		954E738DE11F2E5B6B54FFD811648945 /* PresenterAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BCF243BE9D8BDF02B1A0932088EF395 /* PresenterAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C330A44452ACAD7CB1253D441DA6726 /* PresenterCrossDissolveAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 134252A97AA7F24394E0415FA7FEAA58 /* PresenterCrossDissolveAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A21BDC71EF953907EA3108D471490CEB /* PresenterTransitionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A65D7447867FA5ADC0800D9290F5C3D9 /* PresenterTransitionContext.m */; };
-		ADDB6D60BC7A3F87EC315A005F7528BC /* PresenterVerticalAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = B50CE5574C62427AFF84BE78A864D383 /* PresenterVerticalAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AEE88854968EA9B57E17A1D062874BFF /* PresenterOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF73F0202A638AB2D9E592A462C4A36 /* PresenterOption.m */; };
-		C3557A9B996862AD7B1CF3F0EDAE3C0B /* PresenterVerticalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = A46312B75CE4B57486600B876AA62329 /* PresenterVerticalAnimator.m */; };
-		CB2126325A75C74C9D60E44FADA78F93 /* PresenterOption.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A11178CA12ED8F7AC5AE2F86A3CA299 /* PresenterOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D500B6DE3D99D3E8F71D173C30FC93F6 /* PresenterHorizontalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A217DE54FD19CA10ADEC281F9741AB /* PresenterHorizontalAnimator.m */; };
-		E7E21869461DC823E7BE1CD4098E8935 /* PresenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6247F07D98C37EC41BC69ABE285D46A9 /* PresenterViewController.m */; };
-		EF08803C17E0CA6CA601749F1867B030 /* PresenterViewController+Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 6969B1E39B64CB4EB787374D6F02664A /* PresenterViewController+Show.m */; };
-		F13BEDD79BB400B86389492C932ED543 /* Presenter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7CCF42D2FB0D7CA68F0AB7B5C2EE041 /* Presenter-dummy.m */; };
-		F3A8EAC91E56E0DE5305F19BF981A982 /* PresenterCrossDissolveAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 59F73A9C5D3186CB9DF6A8563E5E001B /* PresenterCrossDissolveAnimator.m */; };
-		F6539EEDB2BCDF1B4040656A93178C5F /* PresenterHorizontalAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = EE4F489CFCBBD703D8E5FA71B1FAF3B5 /* PresenterHorizontalAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7500D626287EAF6ED35538EE19BA9DFC /* Presenter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CD0967A7F5D2042A7E8A58FFC95172 /* Presenter-dummy.m */; };
+		7D0190CC9A87A6EF3444179B4277137B /* PresenterViewController+Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C88E09371D94C8B8667BFF75CE8F19 /* PresenterViewController+Show.m */; };
+		7F487FA132D64024623D08D4DB0EFECC /* PresenterAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = BD1676A708121074862AD6779FA53CEF /* PresenterAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FBE1B55647BA4243E3BF14EE9A383BC /* PresenterTransitionContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1EC24358133BBE2EBB68979E7C08D1 /* PresenterTransitionContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA6ADDF5315EF6F8F7796E4C65F9C546 /* PresenterTransitionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E6C81F085A22E26B0030E2CC479C1B5 /* PresenterTransitionContext.m */; };
+		B25FD847EE8571A0E59000BD61516F6A /* PresenterOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6706E8378884ED1704BFDCA636225BB9 /* PresenterOption.m */; };
+		B2942A7C0BA491780A62812CC0EDCE92 /* PresenterAnimatorOption.h in Headers */ = {isa = PBXBuildFile; fileRef = F3FCF23A42ECE42827846F1C05514206 /* PresenterAnimatorOption.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C48C5FFF43AF8FAA3C9E693E377D8F12 /* PresenterAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D127F4DD20983DE61C1D6217B8AF184 /* PresenterAnimator.m */; };
+		CD42B9A30E193EF655A12398AC67C133 /* Presenter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5455CCD4137D58EE306C61690A5CF0E1 /* Presenter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0950D596C16E314C1E4851DDE438DBA /* PresenterHorizontalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 70ECC6C91F9CE7A9BFE14F8710BFDF4A /* PresenterHorizontalAnimator.m */; };
+		D877D191B695009566328DADFC0472DF /* PresenterVerticalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E1933D64CFC5908CD642594DDF0679 /* PresenterVerticalAnimator.m */; };
+		DBF7F4A04160240B19E77EFBE44004D1 /* PresenterFlipHorizontalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B15CFBB0197C7585B7EA5096599214B7 /* PresenterFlipHorizontalAnimator.m */; };
+		E7F468B91551E651F4CC8C072A8826CA /* PresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336F5A8EAE732408F5F0B93F94F72611 /* PresentationController.m */; };
+		EB00166DED4D5C87E1F4EF8BE6F5577F /* PresenterVerticalAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = BD00138994C85C9A35D00DBFE478A507 /* PresenterVerticalAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE34924231D1AEFDFD40DD9370D0C7EB /* PresenterHorizontalAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A5A38232DB5293904CFC432C6A0AA00 /* PresenterHorizontalAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,50 +54,52 @@
 
 /* Begin PBXFileReference section */
 		044AA3E23F71470C9B5F50D44720EA0D /* Pods-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-resources.sh"; sourceTree = "<group>"; };
+		06E1933D64CFC5908CD642594DDF0679 /* PresenterVerticalAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterVerticalAnimator.m; path = Presenter/Presenter/Classes/Animator/PresenterVerticalAnimator.m; sourceTree = "<group>"; };
+		07B89C370B89178C18A4531856F8304A /* PresenterAnimatorOption.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterAnimatorOption.m; path = Presenter/Presenter/Classes/Animator/PresenterAnimatorOption.m; sourceTree = "<group>"; };
+		0C2D94F33DAF662215A7CA6678DBDB2A /* Presenter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Presenter-prefix.pch"; sourceTree = "<group>"; };
 		0DA2A0755C2CE206E885F63A43501CD2 /* Presenter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Presenter.framework; path = Presenter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		11434BC759D12F57876FBB74A4775E74 /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		134252A97AA7F24394E0415FA7FEAA58 /* PresenterCrossDissolveAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterCrossDissolveAnimator.h; path = Presenter/Presenter/Classes/Animator/PresenterCrossDissolveAnimator.h; sourceTree = "<group>"; };
 		15D3FE98E9F2D34863BD3F3597A0485A /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
-		1A591339FBBA9A9364B43DFBB763C8FA /* PresentationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresentationController.m; path = Presenter/Presenter/Classes/PresentationController.m; sourceTree = "<group>"; };
+		1A5A38232DB5293904CFC432C6A0AA00 /* PresenterHorizontalAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterHorizontalAnimator.h; path = Presenter/Presenter/Classes/Animator/PresenterHorizontalAnimator.h; sourceTree = "<group>"; };
 		1AD65E35A3233FBE6F2EFDEB3D43D114 /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
-		1AF73F0202A638AB2D9E592A462C4A36 /* PresenterOption.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterOption.m; path = Presenter/Presenter/Classes/PresenterOption.m; sourceTree = "<group>"; };
-		1E2C033E4D4F53F6B52A5B93D8091462 /* SHPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SHPresenter.h; path = Presenter/Presenter/Classes/SHPresenter.h; sourceTree = "<group>"; };
 		25A37D4D536CC5988A439441117C41F4 /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
-		2A3A453B0B51E3F4D520B60E60AD658C /* Presenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Presenter.h; path = Presenter/Presenter/Classes/Presenter.h; sourceTree = "<group>"; };
-		2B0360AFF9304E790EAC1CD923C13E40 /* PresenterFlipHorizontalAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterFlipHorizontalAnimator.m; path = Presenter/Presenter/Classes/Animator/PresenterFlipHorizontalAnimator.m; sourceTree = "<group>"; };
+		2C1EC24358133BBE2EBB68979E7C08D1 /* PresenterTransitionContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterTransitionContext.h; path = Presenter/Presenter/Classes/Animator/PresenterTransitionContext.h; sourceTree = "<group>"; };
+		336F5A8EAE732408F5F0B93F94F72611 /* PresentationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresentationController.m; path = Presenter/Presenter/Classes/PresentationController.m; sourceTree = "<group>"; };
 		3ADE9E5655579DB0F79DC9C80758673C /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3CB0FC487A1F5B194EF4CA4464C8C79C /* PresenterViewController+Show.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PresenterViewController+Show.h"; path = "Presenter/Presenter/Classes/BaseViewController/PresenterViewController+Show.h"; sourceTree = "<group>"; };
-		3DD20067487E06868CDF41A72D34CE2E /* Presenter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Presenter.modulemap; sourceTree = "<group>"; };
 		3F3EFEBDE6702DEFDFFF9D5C6DBC3773 /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
-		507BF417AF2340E362D64FA9AA18F841 /* PresenterAnimatorOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterAnimatorOption.h; path = Presenter/Presenter/Classes/Animator/PresenterAnimatorOption.h; sourceTree = "<group>"; };
-		53CCE1DF88B14DDB16FEBAD1CE416D5E /* PresenterTransitionContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterTransitionContext.h; path = Presenter/Presenter/Classes/Animator/PresenterTransitionContext.h; sourceTree = "<group>"; };
-		59F73A9C5D3186CB9DF6A8563E5E001B /* PresenterCrossDissolveAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterCrossDissolveAnimator.m; path = Presenter/Presenter/Classes/Animator/PresenterCrossDissolveAnimator.m; sourceTree = "<group>"; };
-		59FE944F94C4C3E851F58ADB105F50F7 /* Presenter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Presenter-umbrella.h"; sourceTree = "<group>"; };
+		46029BF2ADB532C1B6F9CA3157E78B21 /* UIViewController+Top.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Top.m"; path = "Presenter/Presenter/Classes/BaseViewController/UIViewController+Top.m"; sourceTree = "<group>"; };
+		47D9F954E2987F9EA0D7CF4B1C900F9D /* Presenter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Presenter.modulemap; sourceTree = "<group>"; };
+		53652D508E5F65CA343A55754AC38799 /* PresenterViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterViewController.h; path = Presenter/Presenter/Classes/BaseViewController/PresenterViewController.h; sourceTree = "<group>"; };
+		5455CCD4137D58EE306C61690A5CF0E1 /* Presenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Presenter.h; path = Presenter/Presenter/Classes/Presenter.h; sourceTree = "<group>"; };
 		5B81C04F8E84EAE60AE15C8695031A5F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6247F07D98C37EC41BC69ABE285D46A9 /* PresenterViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterViewController.m; path = Presenter/Presenter/Classes/BaseViewController/PresenterViewController.m; sourceTree = "<group>"; };
+		5CE50A8E99E75D0C72F10528664B16AC /* PresenterCrossDissolveAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterCrossDissolveAnimator.h; path = Presenter/Presenter/Classes/Animator/PresenterCrossDissolveAnimator.h; sourceTree = "<group>"; };
+		5F49CEB72A6C7D740EC68A56320F6150 /* PresenterCrossDissolveAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterCrossDissolveAnimator.m; path = Presenter/Presenter/Classes/Animator/PresenterCrossDissolveAnimator.m; sourceTree = "<group>"; };
+		62CD0967A7F5D2042A7E8A58FFC95172 /* Presenter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Presenter-dummy.m"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6969B1E39B64CB4EB787374D6F02664A /* PresenterViewController+Show.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PresenterViewController+Show.m"; path = "Presenter/Presenter/Classes/BaseViewController/PresenterViewController+Show.m"; sourceTree = "<group>"; };
-		69F486C1ED4DFD876A8339FBDF1BFFB9 /* PresenterViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterViewController.h; path = Presenter/Presenter/Classes/BaseViewController/PresenterViewController.h; sourceTree = "<group>"; };
-		6BCF243BE9D8BDF02B1A0932088EF395 /* PresenterAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterAnimator.h; path = Presenter/Presenter/Classes/Animator/PresenterAnimator.h; sourceTree = "<group>"; };
-		6BDA66BF2503A6E1003A9DC58762FDD9 /* PresenterAnimatorOption.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterAnimatorOption.m; path = Presenter/Presenter/Classes/Animator/PresenterAnimatorOption.m; sourceTree = "<group>"; };
-		71B8BF70920491893109868F94B18D2E /* PresenterFlipHorizontalAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterFlipHorizontalAnimator.h; path = Presenter/Presenter/Classes/Animator/PresenterFlipHorizontalAnimator.h; sourceTree = "<group>"; };
+		6706E8378884ED1704BFDCA636225BB9 /* PresenterOption.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterOption.m; path = Presenter/Presenter/Classes/PresenterOption.m; sourceTree = "<group>"; };
+		6A8A3425D63A6C2273D62E1D2A40045E /* PresenterManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterManager.h; path = Presenter/Presenter/Classes/PresenterManager.h; sourceTree = "<group>"; };
+		70ECC6C91F9CE7A9BFE14F8710BFDF4A /* PresenterHorizontalAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterHorizontalAnimator.m; path = Presenter/Presenter/Classes/Animator/PresenterHorizontalAnimator.m; sourceTree = "<group>"; };
+		740EC1BAD91D8884C23F68820E37101F /* PresenterOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterOption.h; path = Presenter/Presenter/Classes/PresenterOption.h; sourceTree = "<group>"; };
+		75C88E09371D94C8B8667BFF75CE8F19 /* PresenterViewController+Show.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PresenterViewController+Show.m"; path = "Presenter/Presenter/Classes/BaseViewController/PresenterViewController+Show.m"; sourceTree = "<group>"; };
 		76EA808D11485B34D65B21FD6084F94B /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A11178CA12ED8F7AC5AE2F86A3CA299 /* PresenterOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterOption.h; path = Presenter/Presenter/Classes/PresenterOption.h; sourceTree = "<group>"; };
+		7C0E1D4AA242982659F336122B21B1AB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D127F4DD20983DE61C1D6217B8AF184 /* PresenterAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterAnimator.m; path = Presenter/Presenter/Classes/Animator/PresenterAnimator.m; sourceTree = "<group>"; };
+		7E6C81F085A22E26B0030E2CC479C1B5 /* PresenterTransitionContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterTransitionContext.m; path = Presenter/Presenter/Classes/Animator/PresenterTransitionContext.m; sourceTree = "<group>"; };
+		7E8896AA6E3979D22A17E282EB293BD3 /* UIViewController+Top.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Top.h"; path = "Presenter/Presenter/Classes/BaseViewController/UIViewController+Top.h"; sourceTree = "<group>"; };
+		84FD578364923D4FFCB8A9688FD81884 /* Presenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Presenter.xcconfig; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A46312B75CE4B57486600B876AA62329 /* PresenterVerticalAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterVerticalAnimator.m; path = Presenter/Presenter/Classes/Animator/PresenterVerticalAnimator.m; sourceTree = "<group>"; };
-		A65D7447867FA5ADC0800D9290F5C3D9 /* PresenterTransitionContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterTransitionContext.m; path = Presenter/Presenter/Classes/Animator/PresenterTransitionContext.m; sourceTree = "<group>"; };
+		9E1948D66CB6C7C845C77A9E23E25A11 /* PresenterViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterViewController.m; path = Presenter/Presenter/Classes/BaseViewController/PresenterViewController.m; sourceTree = "<group>"; };
 		A79AC23D5A157FED70D9C53D844B2319 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
-		A802001A8FF3B4F5AC4F344BCC332612 /* Presenter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Presenter-prefix.pch"; sourceTree = "<group>"; };
-		AFFEDE2A861DFD3D40C54DCDE6D3D938 /* PresentationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresentationController.h; path = Presenter/Presenter/Classes/PresentationController.h; sourceTree = "<group>"; };
-		B245A4D29093F39F891B010451722B71 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B50CE5574C62427AFF84BE78A864D383 /* PresenterVerticalAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterVerticalAnimator.h; path = Presenter/Presenter/Classes/Animator/PresenterVerticalAnimator.h; sourceTree = "<group>"; };
-		C4A217DE54FD19CA10ADEC281F9741AB /* PresenterHorizontalAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterHorizontalAnimator.m; path = Presenter/Presenter/Classes/Animator/PresenterHorizontalAnimator.m; sourceTree = "<group>"; };
-		C5ED48A82AF60A04BC84EF3FFF3D6B39 /* PresenterAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterAnimator.m; path = Presenter/Presenter/Classes/Animator/PresenterAnimator.m; sourceTree = "<group>"; };
-		D7CCF42D2FB0D7CA68F0AB7B5C2EE041 /* Presenter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Presenter-dummy.m"; sourceTree = "<group>"; };
-		E22BC887E777E9E9730CA1CAE7F0AEE5 /* Presenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Presenter.m; path = Presenter/Presenter/Classes/Presenter.m; sourceTree = "<group>"; };
-		E98FDEE8C45701AC145366388AE17B62 /* Presenter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Presenter.xcconfig; sourceTree = "<group>"; };
-		EE4F489CFCBBD703D8E5FA71B1FAF3B5 /* PresenterHorizontalAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterHorizontalAnimator.h; path = Presenter/Presenter/Classes/Animator/PresenterHorizontalAnimator.h; sourceTree = "<group>"; };
+		A8221D7EBC0D770B44C05E34E146634C /* PresenterFlipHorizontalAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterFlipHorizontalAnimator.h; path = Presenter/Presenter/Classes/Animator/PresenterFlipHorizontalAnimator.h; sourceTree = "<group>"; };
+		B15CFBB0197C7585B7EA5096599214B7 /* PresenterFlipHorizontalAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterFlipHorizontalAnimator.m; path = Presenter/Presenter/Classes/Animator/PresenterFlipHorizontalAnimator.m; sourceTree = "<group>"; };
+		BD00138994C85C9A35D00DBFE478A507 /* PresenterVerticalAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterVerticalAnimator.h; path = Presenter/Presenter/Classes/Animator/PresenterVerticalAnimator.h; sourceTree = "<group>"; };
+		BD1676A708121074862AD6779FA53CEF /* PresenterAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterAnimator.h; path = Presenter/Presenter/Classes/Animator/PresenterAnimator.h; sourceTree = "<group>"; };
+		D21253954E150C265A898377CAF397B1 /* Presenter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Presenter-umbrella.h"; sourceTree = "<group>"; };
+		D4225271624B3402D7E125B4A806FD69 /* PresenterManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PresenterManager.m; path = Presenter/Presenter/Classes/PresenterManager.m; sourceTree = "<group>"; };
+		ED360CAC31271DABE3F1E13D517A45EA /* PresentationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresentationController.h; path = Presenter/Presenter/Classes/PresentationController.h; sourceTree = "<group>"; };
 		EFC5B2E05B58CD826FD55659BF1D7E39 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		F2875FF044AF23A968B3CBCCE9F4E563 /* PresenterViewController+Show.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PresenterViewController+Show.h"; path = "Presenter/Presenter/Classes/BaseViewController/PresenterViewController+Show.h"; sourceTree = "<group>"; };
+		F3FCF23A42ECE42827846F1C05514206 /* PresenterAnimatorOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PresenterAnimatorOption.h; path = Presenter/Presenter/Classes/Animator/PresenterAnimatorOption.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,42 @@
 			path = "Target Support Files/Pods-Example";
 			sourceTree = "<group>";
 		};
+		459079A10BFE99A8542C551FD4F46279 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				ED360CAC31271DABE3F1E13D517A45EA /* PresentationController.h */,
+				336F5A8EAE732408F5F0B93F94F72611 /* PresentationController.m */,
+				5455CCD4137D58EE306C61690A5CF0E1 /* Presenter.h */,
+				BD1676A708121074862AD6779FA53CEF /* PresenterAnimator.h */,
+				7D127F4DD20983DE61C1D6217B8AF184 /* PresenterAnimator.m */,
+				F3FCF23A42ECE42827846F1C05514206 /* PresenterAnimatorOption.h */,
+				07B89C370B89178C18A4531856F8304A /* PresenterAnimatorOption.m */,
+				5CE50A8E99E75D0C72F10528664B16AC /* PresenterCrossDissolveAnimator.h */,
+				5F49CEB72A6C7D740EC68A56320F6150 /* PresenterCrossDissolveAnimator.m */,
+				A8221D7EBC0D770B44C05E34E146634C /* PresenterFlipHorizontalAnimator.h */,
+				B15CFBB0197C7585B7EA5096599214B7 /* PresenterFlipHorizontalAnimator.m */,
+				1A5A38232DB5293904CFC432C6A0AA00 /* PresenterHorizontalAnimator.h */,
+				70ECC6C91F9CE7A9BFE14F8710BFDF4A /* PresenterHorizontalAnimator.m */,
+				6A8A3425D63A6C2273D62E1D2A40045E /* PresenterManager.h */,
+				D4225271624B3402D7E125B4A806FD69 /* PresenterManager.m */,
+				740EC1BAD91D8884C23F68820E37101F /* PresenterOption.h */,
+				6706E8378884ED1704BFDCA636225BB9 /* PresenterOption.m */,
+				2C1EC24358133BBE2EBB68979E7C08D1 /* PresenterTransitionContext.h */,
+				7E6C81F085A22E26B0030E2CC479C1B5 /* PresenterTransitionContext.m */,
+				BD00138994C85C9A35D00DBFE478A507 /* PresenterVerticalAnimator.h */,
+				06E1933D64CFC5908CD642594DDF0679 /* PresenterVerticalAnimator.m */,
+				53652D508E5F65CA343A55754AC38799 /* PresenterViewController.h */,
+				9E1948D66CB6C7C845C77A9E23E25A11 /* PresenterViewController.m */,
+				F2875FF044AF23A968B3CBCCE9F4E563 /* PresenterViewController+Show.h */,
+				75C88E09371D94C8B8667BFF75CE8F19 /* PresenterViewController+Show.m */,
+				7E8896AA6E3979D22A17E282EB293BD3 /* UIViewController+Top.h */,
+				46029BF2ADB532C1B6F9CA3157E78B21 /* UIViewController+Top.m */,
+				C82BCB59811E00F45203CB42A7C59508 /* Support Files */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		6A4F6A14E3FB951290E4531728B7A461 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,16 +198,16 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				9AD3389EAF22872B92C1E2566E16A74F /* Pods */,
+				7EA312D078A0CB8D879CA9E6B96E945C /* Pods */,
 				13A7E10AD00595EF487E2B982045749B /* Products */,
 				6A4F6A14E3FB951290E4531728B7A461 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9AD3389EAF22872B92C1E2566E16A74F /* Pods */ = {
+		7EA312D078A0CB8D879CA9E6B96E945C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E9B5AD6EA6C91FB1E229D46F68A2536B /* Presenter */,
+				459079A10BFE99A8542C551FD4F46279 /* Presenter */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -180,60 +220,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C82BCB59811E00F45203CB42A7C59508 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C0E1D4AA242982659F336122B21B1AB /* Info.plist */,
+				47D9F954E2987F9EA0D7CF4B1C900F9D /* Presenter.modulemap */,
+				84FD578364923D4FFCB8A9688FD81884 /* Presenter.xcconfig */,
+				62CD0967A7F5D2042A7E8A58FFC95172 /* Presenter-dummy.m */,
+				0C2D94F33DAF662215A7CA6678DBDB2A /* Presenter-prefix.pch */,
+				D21253954E150C265A898377CAF397B1 /* Presenter-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Presenter";
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		E9B5AD6EA6C91FB1E229D46F68A2536B /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				AFFEDE2A861DFD3D40C54DCDE6D3D938 /* PresentationController.h */,
-				1A591339FBBA9A9364B43DFBB763C8FA /* PresentationController.m */,
-				2A3A453B0B51E3F4D520B60E60AD658C /* Presenter.h */,
-				E22BC887E777E9E9730CA1CAE7F0AEE5 /* Presenter.m */,
-				6BCF243BE9D8BDF02B1A0932088EF395 /* PresenterAnimator.h */,
-				C5ED48A82AF60A04BC84EF3FFF3D6B39 /* PresenterAnimator.m */,
-				507BF417AF2340E362D64FA9AA18F841 /* PresenterAnimatorOption.h */,
-				6BDA66BF2503A6E1003A9DC58762FDD9 /* PresenterAnimatorOption.m */,
-				134252A97AA7F24394E0415FA7FEAA58 /* PresenterCrossDissolveAnimator.h */,
-				59F73A9C5D3186CB9DF6A8563E5E001B /* PresenterCrossDissolveAnimator.m */,
-				71B8BF70920491893109868F94B18D2E /* PresenterFlipHorizontalAnimator.h */,
-				2B0360AFF9304E790EAC1CD923C13E40 /* PresenterFlipHorizontalAnimator.m */,
-				EE4F489CFCBBD703D8E5FA71B1FAF3B5 /* PresenterHorizontalAnimator.h */,
-				C4A217DE54FD19CA10ADEC281F9741AB /* PresenterHorizontalAnimator.m */,
-				8A11178CA12ED8F7AC5AE2F86A3CA299 /* PresenterOption.h */,
-				1AF73F0202A638AB2D9E592A462C4A36 /* PresenterOption.m */,
-				53CCE1DF88B14DDB16FEBAD1CE416D5E /* PresenterTransitionContext.h */,
-				A65D7447867FA5ADC0800D9290F5C3D9 /* PresenterTransitionContext.m */,
-				B50CE5574C62427AFF84BE78A864D383 /* PresenterVerticalAnimator.h */,
-				A46312B75CE4B57486600B876AA62329 /* PresenterVerticalAnimator.m */,
-				69F486C1ED4DFD876A8339FBDF1BFFB9 /* PresenterViewController.h */,
-				6247F07D98C37EC41BC69ABE285D46A9 /* PresenterViewController.m */,
-				3CB0FC487A1F5B194EF4CA4464C8C79C /* PresenterViewController+Show.h */,
-				6969B1E39B64CB4EB787374D6F02664A /* PresenterViewController+Show.m */,
-				1E2C033E4D4F53F6B52A5B93D8091462 /* SHPresenter.h */,
-				FCB205A6BF39E8838193880EBECB97B8 /* Support Files */,
-			);
-			name = Presenter;
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		FCB205A6BF39E8838193880EBECB97B8 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B245A4D29093F39F891B010451722B71 /* Info.plist */,
-				3DD20067487E06868CDF41A72D34CE2E /* Presenter.modulemap */,
-				E98FDEE8C45701AC145366388AE17B62 /* Presenter.xcconfig */,
-				D7CCF42D2FB0D7CA68F0AB7B5C2EE041 /* Presenter-dummy.m */,
-				A802001A8FF3B4F5AC4F344BCC332612 /* Presenter-prefix.pch */,
-				59FE944F94C4C3E851F58ADB105F50F7 /* Presenter-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Presenter";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,24 +253,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A59913EA77D763F9956E9F15064CF5A2 /* Headers */ = {
+		94C3BABC854C5F7B159BAAD80E22AE96 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7346830FA2B3FB7BA18AF9BF9DE181E0 /* PresentationController.h in Headers */,
-				218AD9EBFCED2D4C87B6A50118AC7F8A /* Presenter-umbrella.h in Headers */,
-				8C67984B6058A2B5B2404529D5786F0C /* Presenter.h in Headers */,
-				954E738DE11F2E5B6B54FFD811648945 /* PresenterAnimator.h in Headers */,
-				225EE018BFA3E41F052C6DE90FBAA44C /* PresenterAnimatorOption.h in Headers */,
-				9C330A44452ACAD7CB1253D441DA6726 /* PresenterCrossDissolveAnimator.h in Headers */,
-				21DA32701E33486A01FBEA8B01A345E9 /* PresenterFlipHorizontalAnimator.h in Headers */,
-				F6539EEDB2BCDF1B4040656A93178C5F /* PresenterHorizontalAnimator.h in Headers */,
-				CB2126325A75C74C9D60E44FADA78F93 /* PresenterOption.h in Headers */,
-				1D91F8E0CBEA97AE864FB4478A10F21D /* PresenterTransitionContext.h in Headers */,
-				ADDB6D60BC7A3F87EC315A005F7528BC /* PresenterVerticalAnimator.h in Headers */,
-				0ABE09344F579FA5E92DD53286FC5783 /* PresenterViewController+Show.h in Headers */,
-				039D6C84F760C6B9A4461D845D51E6AE /* PresenterViewController.h in Headers */,
-				92DA82FB3FD9FBC7A21F186DDCCE93F1 /* SHPresenter.h in Headers */,
+				6A844BF7157E4739C9AF373AAF17150D /* PresentationController.h in Headers */,
+				6BFDAA15CD81EDB7AB13A974F2689EE5 /* Presenter-umbrella.h in Headers */,
+				CD42B9A30E193EF655A12398AC67C133 /* Presenter.h in Headers */,
+				7F487FA132D64024623D08D4DB0EFECC /* PresenterAnimator.h in Headers */,
+				B2942A7C0BA491780A62812CC0EDCE92 /* PresenterAnimatorOption.h in Headers */,
+				15471E1CF15D7686AE2F74337C6F4819 /* PresenterCrossDissolveAnimator.h in Headers */,
+				4B5ECFCC5A75D50439AF58FD3F8CC645 /* PresenterFlipHorizontalAnimator.h in Headers */,
+				EE34924231D1AEFDFD40DD9370D0C7EB /* PresenterHorizontalAnimator.h in Headers */,
+				294D357023791793FFB2436272A5A2D6 /* PresenterManager.h in Headers */,
+				50F9CBBB55E5C3338388E485A71813A1 /* PresenterOption.h in Headers */,
+				7FBE1B55647BA4243E3BF14EE9A383BC /* PresenterTransitionContext.h in Headers */,
+				EB00166DED4D5C87E1F4EF8BE6F5577F /* PresenterVerticalAnimator.h in Headers */,
+				17F258E5E54E800F3C251742AAF77403 /* PresenterViewController+Show.h in Headers */,
+				6740409EFF17995E8D77A223B12B2EC4 /* PresenterViewController.h in Headers */,
+				52FDBCD4D0A095682E0723B33C0B7E63 /* UIViewController+Top.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,9 +300,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EAED9EC797D4C138A7070E4501D2646D /* Build configuration list for PBXNativeTarget "Presenter" */;
 			buildPhases = (
-				631BD3D1178CD77629ACF0483976935A /* Sources */,
+				48B6E35869EECA13270BC36E6CB81752 /* Sources */,
 				576D247B2104638807166F74978A1ABC /* Frameworks */,
-				A59913EA77D763F9956E9F15064CF5A2 /* Headers */,
+				94C3BABC854C5F7B159BAAD80E22AE96 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -334,23 +341,24 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		631BD3D1178CD77629ACF0483976935A /* Sources */ = {
+		48B6E35869EECA13270BC36E6CB81752 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0230CCE0F93816949C32DF8A6958278A /* PresentationController.m in Sources */,
-				F13BEDD79BB400B86389492C932ED543 /* Presenter-dummy.m in Sources */,
-				02C0D2BD50EB2B0962C5B486A8DC2A96 /* Presenter.m in Sources */,
-				2191162EFF2EB88A38EB35F5FA8E89EF /* PresenterAnimator.m in Sources */,
-				49BDA2C435DFC7D18C6AC47FD04CBA14 /* PresenterAnimatorOption.m in Sources */,
-				F3A8EAC91E56E0DE5305F19BF981A982 /* PresenterCrossDissolveAnimator.m in Sources */,
-				409819DBC6185C77D146E484450E91E4 /* PresenterFlipHorizontalAnimator.m in Sources */,
-				D500B6DE3D99D3E8F71D173C30FC93F6 /* PresenterHorizontalAnimator.m in Sources */,
-				AEE88854968EA9B57E17A1D062874BFF /* PresenterOption.m in Sources */,
-				A21BDC71EF953907EA3108D471490CEB /* PresenterTransitionContext.m in Sources */,
-				C3557A9B996862AD7B1CF3F0EDAE3C0B /* PresenterVerticalAnimator.m in Sources */,
-				EF08803C17E0CA6CA601749F1867B030 /* PresenterViewController+Show.m in Sources */,
-				E7E21869461DC823E7BE1CD4098E8935 /* PresenterViewController.m in Sources */,
+				E7F468B91551E651F4CC8C072A8826CA /* PresentationController.m in Sources */,
+				7500D626287EAF6ED35538EE19BA9DFC /* Presenter-dummy.m in Sources */,
+				C48C5FFF43AF8FAA3C9E693E377D8F12 /* PresenterAnimator.m in Sources */,
+				4E88EF2EE87CD87B3ADCE0F3FA1CC55F /* PresenterAnimatorOption.m in Sources */,
+				1E5BC48EF5650B85F423A89781DE1DAB /* PresenterCrossDissolveAnimator.m in Sources */,
+				DBF7F4A04160240B19E77EFBE44004D1 /* PresenterFlipHorizontalAnimator.m in Sources */,
+				D0950D596C16E314C1E4851DDE438DBA /* PresenterHorizontalAnimator.m in Sources */,
+				47D76B50BACBAF929FE1916744F866B6 /* PresenterManager.m in Sources */,
+				B25FD847EE8571A0E59000BD61516F6A /* PresenterOption.m in Sources */,
+				AA6ADDF5315EF6F8F7796E4C65F9C546 /* PresenterTransitionContext.m in Sources */,
+				D877D191B695009566328DADFC0472DF /* PresenterVerticalAnimator.m in Sources */,
+				7D0190CC9A87A6EF3444179B4277137B /* PresenterViewController+Show.m in Sources */,
+				4631BABA21D582257B60EE608B0D5071 /* PresenterViewController.m in Sources */,
+				05E46A4D44AE72F8A13D260323934924 /* UIViewController+Top.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +480,7 @@
 		};
 		CDDDB42AA9F2FAE44E0DCA853A532C57 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E98FDEE8C45701AC145366388AE17B62 /* Presenter.xcconfig */;
+			baseConfigurationReference = 84FD578364923D4FFCB8A9688FD81884 /* Presenter.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -503,7 +511,7 @@
 		};
 		D6A303606C61812C7D8866C71D1900CC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E98FDEE8C45701AC145366388AE17B62 /* Presenter.xcconfig */;
+			baseConfigurationReference = 84FD578364923D4FFCB8A9688FD81884 /* Presenter.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

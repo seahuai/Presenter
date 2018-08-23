@@ -7,14 +7,15 @@
 //
 
 #import "TableViewController.h"
-#import <Presenter/SHPresenter.h>
+#import <Presenter/Presenter.h>
 
 #import "ExampleOneViewController.h"
 #import "ExampleTwoViewController.h"
+#import "ExampleInputViewController.h"
 
 @interface TableViewController () {
     NSArray *_examples;
-    Presenter *_presenter;
+    PresenterManager *_presenterMgr;
 }
 @end
 
@@ -23,8 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"Example";
-    _examples = @[@"Example one",
-                  @"Example two" ];
+    _examples = @[
+                  @"Example one",
+                  @"Example two",
+                  @"Input Example"
+                  ];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,7 +38,7 @@
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return _examples.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -54,6 +58,9 @@
             break;
         case 1:
             [self presentViewController];
+            break;
+        case 2:
+            [self showInputViewController];
             break;
         default:
             break;
@@ -75,12 +82,19 @@
 - (void)presentViewController {
     ExampleTwoViewController *vc = [[ExampleTwoViewController alloc] init];
     PresenterOption *option = [PresenterOption new];
-    option.presentationType = PresenterPresentationTypeCenter;
+    option.presentationPosition = PresenterPresentationPositionCenter;
     option.presentedViewSize = CGSizeMake(300, 200);
     option.backgroundColor = [UIColor yellowColor];
     option.backgroundColorOpacity = 0.2;
-    _presenter = [[Presenter alloc] initWithPresenterOption:option];
-    [_presenter presentViewController:vc inViewController:self];
+    _presenterMgr = [[PresenterManager alloc] initWithPresenterOption:option];
+    [_presenterMgr presentViewController:vc inViewController:self];
+}
+
+// 支持键盘监听
+// 支持横竖屏适配
+- (void)showInputViewController {
+    ExampleInputViewController *vc = [[ExampleInputViewController alloc] init];
+    [vc show];
 }
 
 @end

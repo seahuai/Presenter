@@ -7,22 +7,43 @@
 //
 
 #import "PresenterViewController+Show.h"
-#import "Presenter.h"
+#import "PresenterManager.h"
+#import "UIViewController+Top.h"
 #import <objc/runtime.h>
 
 @implementation PresenterViewController (Show)
 
-- (Presenter *)innerPresenter {
-    Presenter *_presenter = objc_getAssociatedObject(self, @selector(innerPresenter));
-    if (!_presenter) {
-        _presenter = [[Presenter alloc] initWithPresenterOption:self.presenterOption];
-        objc_setAssociatedObject(self, @selector(innerPresenter), _presenter, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (PresenterManager *)innerPresenterManager {
+    PresenterManager *_presenterMgr = objc_getAssociatedObject(self, @selector(innerPresenterManager));
+    if (!_presenterMgr) {
+        PresenterOption *option = [self presenterOption];
+        _presenterMgr = [[PresenterManager alloc] initWithPresenterOption:option];
+        objc_setAssociatedObject(self, @selector(innerPresenterManager), _presenterMgr, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
-    return _presenter;
+    
+    if ([self respondsToSelector:@selector(presenterOptionForLandscapeMode:)]) {
+        BOOL isLandscape = self.view.bounds.size.width > self.view.bounds.size.height;
+        PresenterOption *option = [self presenterOptionForLandscapeMode:isLandscape];
+        _presenterMgr.option = option;
+    }
+    
+    return _presenterMgr;
 }
 
 - (void)showInViewController:(UIViewController *)viewController {
-    [self.innerPresenter presentViewController:self inViewController:viewController];
+    if (viewController) {
+        [self.innerPresenterManager presentViewController:self inViewController:viewController];
+    }else {
+        [self.innerPresenterManager presentViewController:self inViewController:[UIViewController topViewController]];
+    }
+}
+
+- (void)show {
+    [self showInViewController:nil];
+}
+
+- (void)hide {
+    [self.innerPresenterManager dismiss];
 }
 
 @end

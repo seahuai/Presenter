@@ -15,6 +15,7 @@
 		3530880A212ADD0E0050B953 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35308809212ADD0E0050B953 /* TableViewController.m */; };
 		3530880D212ADEB50050B953 /* ExampleOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3530880C212ADEB50050B953 /* ExampleOneViewController.m */; };
 		35308811212AE0970050B953 /* ExampleTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35308810212AE0970050B953 /* ExampleTwoViewController.m */; };
+		3572E091212EBC3900F47A6D /* ExampleInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572E090212EBC3900F47A6D /* ExampleInputViewController.m */; };
 		DB89363C0A49288A9C31FE16 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 128FD134E1A9FACB8652ECB9 /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,8 @@
 		3530880C212ADEB50050B953 /* ExampleOneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleOneViewController.m; sourceTree = "<group>"; };
 		3530880F212AE0970050B953 /* ExampleTwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleTwoViewController.h; sourceTree = "<group>"; };
 		35308810212AE0970050B953 /* ExampleTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTwoViewController.m; sourceTree = "<group>"; };
+		3572E08F212EBC3900F47A6D /* ExampleInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleInputViewController.h; sourceTree = "<group>"; };
+		3572E090212EBC3900F47A6D /* ExampleInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleInputViewController.m; sourceTree = "<group>"; };
 		83BC2C0A7F4425F6F7B0BEEB /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +95,8 @@
 				3530880C212ADEB50050B953 /* ExampleOneViewController.m */,
 				3530880F212AE0970050B953 /* ExampleTwoViewController.h */,
 				35308810212AE0970050B953 /* ExampleTwoViewController.m */,
+				3572E08F212EBC3900F47A6D /* ExampleInputViewController.h */,
+				3572E090212EBC3900F47A6D /* ExampleInputViewController.m */,
 			);
 			path = ExampleVC;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				3530880A212ADD0E0050B953 /* TableViewController.m in Sources */,
 				35308811212AE0970050B953 /* ExampleTwoViewController.m in Sources */,
 				3530880D212ADEB50050B953 /* ExampleOneViewController.m in Sources */,
+				3572E091212EBC3900F47A6D /* ExampleInputViewController.m in Sources */,
 				353087F3212AD64E0050B953 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

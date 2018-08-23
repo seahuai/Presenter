@@ -16,7 +16,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        _presentationType = PresenterPresentationTypeCenter;
+        _presentationPosition = PresenterPresentationPositionCenter;
         _transitionStyle = PresenterTransitionStyleCrossDissolve;
         _dismissTransitionStyle = PresenterTransitionStyleCrossDissolve;
         _backgroundColor = [UIColor blackColor];
@@ -25,6 +25,8 @@
         _backgroundBlurStyle = UIBlurEffectStyleDark;
         _backgroundView = nil;
         _dismissOnTap = true;
+        _cornerRadius = 0;
+        _corners = UIRectCornerAllCorners;
     }
     return self;
 }
@@ -32,6 +34,12 @@
 - (void)setTransitionStyle:(PresenterTransitionStyle)transitionStyle {
     _transitionStyle = transitionStyle;
     _dismissTransitionStyle = transitionStyle;
+}
+
+- (void)setCornerRadius:(CGFloat)cornerRadius {
+    if (cornerRadius > 0) {
+        _cornerRadius = cornerRadius;
+    }
 }
 
 @end

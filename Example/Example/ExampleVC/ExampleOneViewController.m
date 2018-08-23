@@ -18,7 +18,7 @@
     // 父类提供了默认实现
     PresenterOption *option = [super presenterOption];
     // 视图的位置
-    option.presentationType = PresenterPresentationTypeBottom;
+    option.presentationPosition = PresenterPresentationPositionBottom;
     // transition动画样式， 从底部弹出
     option.transitionStyle = PresenterTransitionStyleVertical;
     

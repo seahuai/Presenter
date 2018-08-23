@@ -19,10 +19,11 @@
 #import "PresenterVerticalAnimator.h"
 #import "PresenterViewController+Show.h"
 #import "PresenterViewController.h"
+#import "UIViewController+Top.h"
 #import "PresentationController.h"
 #import "Presenter.h"
+#import "PresenterManager.h"
 #import "PresenterOption.h"
-#import "SHPresenter.h"
 
 FOUNDATION_EXPORT double PresenterVersionNumber;
 FOUNDATION_EXPORT const unsigned char PresenterVersionString[];

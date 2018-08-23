@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Presenter:
-    :commit: dc7ffe247891205668e716b11d7bdf08caed1f10
+    :commit: 54bd8f43e36a83fa9a9a354c0c8091782f47e20c
     :git: https://github.com/seahuai/Presenter.git
 
 SPEC CHECKSUMS:

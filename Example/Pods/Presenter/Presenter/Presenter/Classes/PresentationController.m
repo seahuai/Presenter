@@ -37,6 +37,7 @@
                                 blurStyle:option.backgroundBlurStyle
                              dismissOnTap:option.dismissOnTap];
         }
+        [self registerKeyboardNotification];
     }
     return self;
 }
@@ -44,7 +45,7 @@
 - (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController
                        presentingViewController:(UIViewController *)presentingViewController
                               presentedViewSize:(CGSize)presentedViewSize
-                               presentationType:(PresenterPresentationType)presentationType
+                               presentationPosition:(PresenterPresentationPosition)presentationPosition
                                 transitionStyle:(PresenterTransitionStyle)transitionStyle
                         dismissTransiotionStyle:(PresenterTransitionStyle)dismissTransitionStyle
                                 backgroundColor:(UIColor *)backgroundColor
@@ -56,7 +57,7 @@
 {
     
     PresenterOption *option = [PresenterOption defaultOption];
-    option.presentationType = presentationType;
+    option.presentationPosition = presentationPosition;
     option.transitionStyle = transitionStyle;
     option.dismissTransitionStyle = dismissTransitionStyle;
     option.backgroundColor = backgroundColor;
@@ -91,14 +92,42 @@
     }
 }
 
+- (void)setupCorner {
+    if (_option.cornerRadius) {
+        CGFloat cornerRadius = _option.cornerRadius;
+        UIBezierPath *cornerPath = [UIBezierPath bezierPathWithRoundedRect:self.presentedView.bounds byRoundingCorners:_option.corners cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
+        CAShapeLayer *maskLayer = [CAShapeLayer new];
+        maskLayer.path = cornerPath.CGPath;
+        self.presentedView.layer.mask = maskLayer;
+    }
+}
+
 
 #pragma mark KeyboardNotification
 - (void)registerKeyboardNotification {
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
-- (void)handleKeyboardNotification:(NSNotification *)notification {
-    
+- (void)keyboardWillShow:(NSNotification *)notification {
+    NSTimeInterval duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    CGRect keyboardEndFrame = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    // 判断有没有遮挡
+    CGRect intersectionRect = CGRectIntersection(self.presentedView.frame, keyboardEndFrame);
+    if (!CGRectEqualToRect(intersectionRect, CGRectZero)) {
+        CGRect frame = self.presentedView.frame;
+        frame.origin.y -= intersectionRect.size.height;
+        [UIView animateWithDuration:duration animations:^{
+            self.presentedView.frame = frame;
+        } completion:nil];
+    }
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+    NSTimeInterval duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    [UIView animateWithDuration:duration animations:^{
+        self.presentedView.frame = [self presentedViewFrame];
+    } completion:nil];
 }
 
 #pragma mark Presentation
@@ -107,7 +136,7 @@
     _backgroundView.frame = self.containerView.bounds;
     _visualEffectView.frame = self.containerView.bounds;
     self.presentedView.frame = [self presentedViewFrame];
-    
+    [self setupCorner];
 }
 
 - (void)presentationTransitionWillBegin {
@@ -141,6 +170,7 @@
 }
 
 - (void)dismissalTransitionWillBegin {
+    [self.presentedView endEditing:true];
     id<UIViewControllerTransitionCoordinator> coordinator = self.presentedViewController.transitionCoordinator;
     if (!coordinator) {
         _backgroundView.alpha = 0;
@@ -156,10 +186,17 @@
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
-//    if ([self.presentedViewController conformsToProtocol:@protocol(PresenterViewController)]) {
-//        id<PresenterViewController> vc = (id<PresenterViewController>)self.presentedViewController;
-//        _presentedViewSize = [vc presentedViewSizeForContainerSize:size];
-//    }
+    BOOL isLandscape = size.width > size.height;
+    PresenterOption *newOption = self.option;
+    if ([self.presentedViewController conformsToProtocol:@protocol(PresenterViewController)]) {
+        id<PresenterViewController> vc = (id<PresenterViewController>)self.presentedViewController;
+        if ([(id)vc respondsToSelector:@selector(presenterOptionForLandscapeMode:)]) {
+            newOption = [vc presenterOptionForLandscapeMode:isLandscape];
+        }
+    }
+    
+    self.option = newOption;
+    
 }
 
 - (CGPoint)presentedViewOrigin {
@@ -171,26 +208,26 @@
         _presentedViewSize = [vc presentedViewSizeForContainerSize:containerSize];
     }
     
-    if (self.option.presentationType == PresenterPresentationTypeCenter) {
+    if (self.option.presentationPosition == PresenterPresentationPositionCenter) {
         
         origin = CGPointMake((containerSize.width - _presentedViewSize.width) * 0.5,
                              (containerSize.height - _presentedViewSize.height) * 0.5);
         
-    }else if (self.option.presentationType == PresenterPresentationTypeBottom) {
+    }else if (self.option.presentationPosition == PresenterPresentationPositionBottom) {
         
         origin = CGPointMake((containerSize.width - _presentedViewSize.width) * 0.5,
                              containerSize.height - _presentedViewSize.height);
         
-    }else if (self.option.presentationType == PresenterPresentationTypeTop) {
+    }else if (self.option.presentationPosition == PresenterPresentationPositionTop) {
         
         origin = CGPointMake((containerSize.width - _presentedViewSize.width) * 0.5, 0);
         
-    }else if (self.option.presentationType == PresenterPresentationTypeLeft) {
+    }else if (self.option.presentationPosition == PresenterPresentationPositionLeft) {
         
         origin = CGPointMake(0, (containerSize.height - _presentedViewSize.height) * 0.5);
         
         
-    }else if (self.option.presentationType == PresenterPresentationTypeRight) {
+    }else if (self.option.presentationPosition == PresenterPresentationPositionRight) {
         
         origin = CGPointMake((containerSize.width - _presentedViewSize.width),
                              (containerSize.height - _presentedViewSize.height) * 0.5);

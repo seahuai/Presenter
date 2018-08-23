@@ -6,7 +6,7 @@
 //  Copyright © 2018年 张思槐. All rights reserved.
 //
 
-#import <Presenter/SHPresenter.h>
+#import <Presenter/Presenter.h>
 
 @interface ExampleOneViewController : PresenterViewController
 
