@@ -9,6 +9,7 @@
 #import "Presenter.h"
 #import "PresentationController.h"
 #import "PresenterAnimator.h"
+#import "UIViewController+Top.h"
 
 @interface Presenter () <UIViewControllerTransitioningDelegate>
 
@@ -34,6 +35,10 @@
     return self;
 }
 
+- (void)presentViewController:(UIViewController*)presentedViewController {
+    [self presentViewController:presentedViewController inViewController:nil];
+}
+
 - (void)presentViewController:(UIViewController*)presentedViewController
              inViewController:(UIViewController*)presentingViewController {
     presentedViewController.transitioningDelegate = self;
@@ -41,8 +46,9 @@
     BOOL animated = !(self.option.transitionStyle == PresenterTransitionStyleWithoutAnimation);
     if (presentingViewController) {
         [presentingViewController presentViewController:presentedViewController animated:animated completion:nil];
+    }else {
+        [[UIViewController topViewController] presentViewController:presentedViewController animated:animated completion:nil];
     }
-    // presented on topViewController;
 }
 
 - (void)dismiss {
@@ -50,7 +56,6 @@
     if (_presentedViewController) {
         [_presentedViewController dismissViewControllerAnimated:animated completion:nil];
     }
-    // call topViewController dismiss method
 }
 
 #pragma mark UIViewControllerTransitioningDelegate
