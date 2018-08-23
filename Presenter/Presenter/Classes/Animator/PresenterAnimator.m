@@ -32,15 +32,15 @@
             
             return [[PresenterVerticalAnimator alloc] initFromTop:false];
             
-        case PresenterTransitionStyleVerticalFromTop:
+        case PresenterTransitionStyleVerticalTop:
             
             return [[PresenterVerticalAnimator alloc] initFromTop:true];
             
-        case PresenterTransitionStyleHorizontalFromRight:
+        case PresenterTransitionStyleHorizontalRight:
             
             return [[PresenterHorizontalAnimator alloc] initFromLeft:false];
             
-        case PresenterTransitionStyleHorizontalFromLeft:
+        case PresenterTransitionStyleHorizontalLeft:
             
             return [[PresenterHorizontalAnimator alloc] initFromLeft:true];
         

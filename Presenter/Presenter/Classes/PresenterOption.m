@@ -16,7 +16,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        _presentationType = PresenterPresentationTypeCenter;
+        _presentationPosition = PresenterPresentationPositionCenter;
         _transitionStyle = PresenterTransitionStyleCrossDissolve;
         _dismissTransitionStyle = PresenterTransitionStyleCrossDissolve;
         _backgroundColor = [UIColor blackColor];
