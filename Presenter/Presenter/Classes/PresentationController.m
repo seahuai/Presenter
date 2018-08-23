@@ -45,7 +45,7 @@
 - (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController
                        presentingViewController:(UIViewController *)presentingViewController
                               presentedViewSize:(CGSize)presentedViewSize
-                               presentationType:(PresenterPresentationType)presentationType
+                               presentationPosition:(PresenterPresentationPosition)presentationPosition
                                 transitionStyle:(PresenterTransitionStyle)transitionStyle
                         dismissTransiotionStyle:(PresenterTransitionStyle)dismissTransitionStyle
                                 backgroundColor:(UIColor *)backgroundColor
@@ -57,7 +57,7 @@
 {
     
     PresenterOption *option = [PresenterOption defaultOption];
-    option.presentationType = presentationType;
+    option.presentationPosition = presentationPosition;
     option.transitionStyle = transitionStyle;
     option.dismissTransitionStyle = dismissTransitionStyle;
     option.backgroundColor = backgroundColor;
@@ -89,6 +89,16 @@
     if (dismissOnTap) {
         UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backgroundViewTapped:)];
         [_backgroundView addGestureRecognizer:tapGestureRecognizer];
+    }
+}
+
+- (void)setupCorner {
+    if (_option.cornerRadius) {
+        CGFloat cornerRadius = _option.cornerRadius;
+        UIBezierPath *cornerPath = [UIBezierPath bezierPathWithRoundedRect:self.presentedView.bounds byRoundingCorners:_option.corners cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
+        CAShapeLayer *maskLayer = [CAShapeLayer new];
+        maskLayer.path = cornerPath.CGPath;
+        self.presentedView.layer.mask = maskLayer;
     }
 }
 
@@ -126,7 +136,7 @@
     _backgroundView.frame = self.containerView.bounds;
     _visualEffectView.frame = self.containerView.bounds;
     self.presentedView.frame = [self presentedViewFrame];
-    
+    [self setupCorner];
 }
 
 - (void)presentationTransitionWillBegin {
@@ -176,10 +186,16 @@
 }
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
-//    if ([self.presentedViewController conformsToProtocol:@protocol(PresenterViewController)]) {
-//        id<PresenterViewController> vc = (id<PresenterViewController>)self.presentedViewController;
-//        _presentedViewSize = [vc presentedViewSizeForContainerSize:size];
-//    }
+    BOOL isLandscape = size.width > size.height;
+    PresenterOption *newOption = self.option;
+    if ([self.presentedViewController conformsToProtocol:@protocol(PresenterViewController)]) {
+        id<PresenterViewController> vc = (id<PresenterViewController>)self.presentedViewController;
+        if ([(id)vc respondsToSelector:@selector(presenterOptionForLandscapeMode:)]) {
+            newOption = [vc presenterOptionForLandscapeMode:isLandscape];
+        }
+    }
+    
+    [self.option config:newOption];
 }
 
 - (CGPoint)presentedViewOrigin {
@@ -191,26 +207,26 @@
         _presentedViewSize = [vc presentedViewSizeForContainerSize:containerSize];
     }
     
-    if (self.option.presentationType == PresenterPresentationTypeCenter) {
+    if (self.option.presentationPosition == PresenterPresentationPositionCenter) {
         
         origin = CGPointMake((containerSize.width - _presentedViewSize.width) * 0.5,
                              (containerSize.height - _presentedViewSize.height) * 0.5);
         
-    }else if (self.option.presentationType == PresenterPresentationTypeBottom) {
+    }else if (self.option.presentationPosition == PresenterPresentationPositionBottom) {
         
         origin = CGPointMake((containerSize.width - _presentedViewSize.width) * 0.5,
                              containerSize.height - _presentedViewSize.height);
         
-    }else if (self.option.presentationType == PresenterPresentationTypeTop) {
+    }else if (self.option.presentationPosition == PresenterPresentationPositionTop) {
         
         origin = CGPointMake((containerSize.width - _presentedViewSize.width) * 0.5, 0);
         
-    }else if (self.option.presentationType == PresenterPresentationTypeLeft) {
+    }else if (self.option.presentationPosition == PresenterPresentationPositionLeft) {
         
         origin = CGPointMake(0, (containerSize.height - _presentedViewSize.height) * 0.5);
         
         
-    }else if (self.option.presentationType == PresenterPresentationTypeRight) {
+    }else if (self.option.presentationPosition == PresenterPresentationPositionRight) {
         
         origin = CGPointMake((containerSize.width - _presentedViewSize.width),
                              (containerSize.height - _presentedViewSize.height) * 0.5);

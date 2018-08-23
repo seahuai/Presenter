@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, PresenterPresentationType) {
-    PresenterPresentationTypeCenter,
-    PresenterPresentationTypeBottom,
-    PresenterPresentationTypeTop,
-    PresenterPresentationTypeLeft,
-    PresenterPresentationTypeRight
+typedef NS_ENUM(NSUInteger, PresenterPresentationPosition) {
+    PresenterPresentationPositionCenter,
+    PresenterPresentationPositionBottom,
+    PresenterPresentationPositionTop,
+    PresenterPresentationPositionLeft,
+    PresenterPresentationPositionRight
 };
 
 typedef NS_ENUM(NSUInteger, PresenterTransitionStyle) {
@@ -21,16 +21,16 @@ typedef NS_ENUM(NSUInteger, PresenterTransitionStyle) {
     PresenterTransitionStyleCrossDissolve,
     PresenterTransitionStyleFlipHorizontal,
     PresenterTransitionStyleVertical,
-    PresenterTransitionStyleVerticalFromTop,
-    PresenterTransitionStyleHorizontalFromRight,
-    PresenterTransitionStyleHorizontalFromLeft
+    PresenterTransitionStyleVerticalTop,
+    PresenterTransitionStyleHorizontalRight,
+    PresenterTransitionStyleHorizontalLeft
 };
 
 @interface PresenterOption : NSObject
 
 + (PresenterOption *)defaultOption;
 
-@property (nonatomic, assign) PresenterPresentationType presentationType;
+@property (nonatomic, assign) PresenterPresentationPosition presentationPosition;
 
 @property (nonatomic, assign) PresenterTransitionStyle transitionStyle;
 
@@ -49,6 +49,12 @@ typedef NS_ENUM(NSUInteger, PresenterTransitionStyle) {
 @property (nonatomic, strong) UIView *backgroundView;
 
 @property (nonatomic, assign) BOOL dismissOnTap;
+
+@property (nonatomic, assign) CGFloat cornerRadius;
+
+@property (nonatomic, assign) UIRectCorner corners;
+
+- (void)config:(PresenterOption *)newOption;
 
 // chain
 // - (PresenterOption* (^)(PresenterPresentationType))presentationType;

@@ -10,13 +10,14 @@
 		353087DE212A91B40050B953 /* PresenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353087DD212A91B40050B953 /* PresenterViewController.m */; };
 		353087E1212AB8640050B953 /* PresenterViewController+Show.m in Sources */ = {isa = PBXBuildFile; fileRef = 353087E0212AB8640050B953 /* PresenterViewController+Show.m */; };
 		353087E4212AB8880050B953 /* PresenterOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 353087E3212AB8880050B953 /* PresenterOption.m */; };
+		3572E085212E604200F47A6D /* UIViewController+Top.m in Sources */ = {isa = PBXBuildFile; fileRef = 3572E084212E604200F47A6D /* UIViewController+Top.m */; };
 		357F488F2127CB0B00CE33C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 357F488E2127CB0B00CE33C3 /* AppDelegate.m */; };
 		357F48922127CB0B00CE33C3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 357F48912127CB0B00CE33C3 /* ViewController.m */; };
 		357F48952127CB0B00CE33C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 357F48932127CB0B00CE33C3 /* Main.storyboard */; };
 		357F48972127CB0C00CE33C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 357F48962127CB0C00CE33C3 /* Assets.xcassets */; };
 		357F489A2127CB0C00CE33C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 357F48982127CB0C00CE33C3 /* LaunchScreen.storyboard */; };
 		357F489D2127CB0C00CE33C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 357F489C2127CB0C00CE33C3 /* main.m */; };
-		359395762127EB350048EB6E /* Presenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 359395752127EB350048EB6E /* Presenter.m */; };
+		359395762127EB350048EB6E /* PresenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 359395752127EB350048EB6E /* PresenterManager.m */; };
 		359395792127F6600048EB6E /* PresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 359395782127F6600048EB6E /* PresentationController.m */; };
 		3593957C212819F80048EB6E /* PresenterAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3593957B212819F80048EB6E /* PresenterAnimator.m */; };
 		3593957F21281A250048EB6E /* PresenterTransitionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3593957E21281A250048EB6E /* PresenterTransitionContext.m */; };
@@ -34,7 +35,9 @@
 		353087E0212AB8640050B953 /* PresenterViewController+Show.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "PresenterViewController+Show.m"; sourceTree = "<group>"; };
 		353087E2212AB8880050B953 /* PresenterOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresenterOption.h; sourceTree = "<group>"; };
 		353087E3212AB8880050B953 /* PresenterOption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresenterOption.m; sourceTree = "<group>"; };
-		35308807212AD9530050B953 /* SHPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SHPresenter.h; sourceTree = "<group>"; };
+		35308807212AD9530050B953 /* Presenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presenter.h; sourceTree = "<group>"; };
+		3572E083212E604200F47A6D /* UIViewController+Top.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Top.h"; sourceTree = "<group>"; };
+		3572E084212E604200F47A6D /* UIViewController+Top.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Top.m"; sourceTree = "<group>"; };
 		357F488A2127CB0B00CE33C3 /* Presenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Presenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		357F488D2127CB0B00CE33C3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		357F488E2127CB0B00CE33C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -45,8 +48,8 @@
 		357F48992127CB0C00CE33C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		357F489B2127CB0C00CE33C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		357F489C2127CB0C00CE33C3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		359395742127EB350048EB6E /* Presenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presenter.h; sourceTree = "<group>"; };
-		359395752127EB350048EB6E /* Presenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Presenter.m; sourceTree = "<group>"; };
+		359395742127EB350048EB6E /* PresenterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresenterManager.h; sourceTree = "<group>"; };
+		359395752127EB350048EB6E /* PresenterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresenterManager.m; sourceTree = "<group>"; };
 		359395772127F6600048EB6E /* PresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentationController.h; sourceTree = "<group>"; };
 		359395782127F6600048EB6E /* PresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentationController.m; sourceTree = "<group>"; };
 		3593957A212819F80048EB6E /* PresenterAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresenterAnimator.h; sourceTree = "<group>"; };
@@ -83,6 +86,8 @@
 				353087DD212A91B40050B953 /* PresenterViewController.m */,
 				353087DF212AB8640050B953 /* PresenterViewController+Show.h */,
 				353087E0212AB8640050B953 /* PresenterViewController+Show.m */,
+				3572E083212E604200F47A6D /* UIViewController+Top.h */,
+				3572E084212E604200F47A6D /* UIViewController+Top.m */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -123,11 +128,11 @@
 		359395732127EA780048EB6E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				35308807212AD9530050B953 /* SHPresenter.h */,
+				35308807212AD9530050B953 /* Presenter.h */,
 				353087DA212A90750050B953 /* BaseViewController */,
 				359395802128275E0048EB6E /* Animator */,
-				359395742127EB350048EB6E /* Presenter.h */,
-				359395752127EB350048EB6E /* Presenter.m */,
+				359395742127EB350048EB6E /* PresenterManager.h */,
+				359395752127EB350048EB6E /* PresenterManager.m */,
 				353087E2212AB8880050B953 /* PresenterOption.h */,
 				353087E3212AB8880050B953 /* PresenterOption.m */,
 				359395772127F6600048EB6E /* PresentationController.h */,
@@ -236,9 +241,10 @@
 				35939583212828320048EB6E /* PresenterCrossDissolveAnimator.m in Sources */,
 				3593958F21283F4C0048EB6E /* PresenterFlipHorizontalAnimator.m in Sources */,
 				3593957F21281A250048EB6E /* PresenterTransitionContext.m in Sources */,
-				359395762127EB350048EB6E /* Presenter.m in Sources */,
+				359395762127EB350048EB6E /* PresenterManager.m in Sources */,
 				3593957C212819F80048EB6E /* PresenterAnimator.m in Sources */,
 				353087E1212AB8640050B953 /* PresenterViewController+Show.m in Sources */,
+				3572E085212E604200F47A6D /* UIViewController+Top.m in Sources */,
 				353087E4212AB8880050B953 /* PresenterOption.m in Sources */,
 				357F488F2127CB0B00CE33C3 /* AppDelegate.m in Sources */,
 				359395792127F6600048EB6E /* PresentationController.m in Sources */,

@@ -21,7 +21,7 @@
 - (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController
                        presentingViewController:(UIViewController *)presentingViewController
                               presentedViewSize:(CGSize)presentedViewSize
-                               presentationType:(PresenterPresentationType)presentationType
+                               presentationPosition:(PresenterPresentationPosition)presentationPosition
                                 transitionStyle:(PresenterTransitionStyle)transitionStyle
                         dismissTransiotionStyle:(PresenterTransitionStyle)dismissTransitionStyle
                                 backgroundColor:(UIColor *)backgroundColor

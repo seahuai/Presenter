@@ -7,10 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "Presenter.h"
+#import "PresenterManager.h"
 
 @interface ViewController () {
-    Presenter *_presenter;
+    PresenterManager *_presenterMgr;
     UITextField *_textField;
     UIButton *_dismissButton;
 }
@@ -20,11 +20,11 @@
 @implementation ViewController
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    _presenter = [Presenter new];
+    _presenterMgr = [PresenterManager new];
     ViewController *vc = [ViewController new];
     vc.view.backgroundColor = [UIColor darkGrayColor];
-    _presenter.option.presentedViewSize = CGSizeMake(200, 400);
-    [_presenter presentViewController:vc inViewController:self];    
+    _presenterMgr.option.presentedViewSize = CGSizeMake(200, 400);
+    [_presenterMgr presentViewController:vc inViewController:self];
 }
 
 - (void)viewDidLoad {
